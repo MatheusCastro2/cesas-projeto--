@@ -1,62 +1,86 @@
+.lista-cards {
+  display: flex;
+  flex-wrap: nowrap; /* Não quebra linha */
+  list-style: none; /* Remove os pontos da lista */
+  padding: 0;
+  margin: 0;
+  gap: 1rem; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza horizontalmente */
+}
 
-  .cards {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-  }
+.lista-cards li {
+  /* Remove o estilo de bloco e margens dos itens */
+  margin: 0;
+  padding: 0;
+}
+
+/* Adicione estilos para o contêiner dos cards */
+.cards {
+  display: flex;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+  gap: 1rem; /* Espaçamento entre os cards */
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid #5a9bfc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   
-  .lista-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .lista-cards li {
-    flex: 1 1 200px;
-    max-width: 220px;
-  }
-  
-  .card {
-    background-color: white;
-    border: 2px solid #5a9bfc;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .card h2,
-  .card p {
-    margin: 1rem;
-    color: #333;
-    font-size: 0.9rem;
-  }
-  
-  .botao-imagem {
-    background-color: #5a9bfc;
-    border: none;
-    padding: 0.75rem;
-    width: 100%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #5a9bfc;
-    transition: background-color 0.2s ease;
-  }
-  
-  .botao-imagem:hover {
-    background-color: #3b82f6;
-  }
-  
-  .botao-imagem img {
-    width: 20px;
-    height: auto;
-  }
-  
+  width: 200px; /* Define uma largura fixa para os cards */
+  height: auto; /* Ajusta a altura automaticamente */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h2,
+.card p {
+  margin: 1rem;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.detalhes {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  padding: 0 1rem;
+}
+
+.card.aberto .detalhes {
+  max-height: 200px; /* espaço suficiente para conteúdo */
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+.botao-imagem {
+  background-color: #5a9bfc;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #5a9bfc;
+  transition: background-color 0.2s ease;
+}
+
+.botao-imagem:hover {
+  background-color: #3b82f6;
+}
+
+.botao-imagem img {
+  width: 20px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card.aberto .botao-imagem img {
+  transform: rotate(180deg); /* seta vira para cima */
+}
