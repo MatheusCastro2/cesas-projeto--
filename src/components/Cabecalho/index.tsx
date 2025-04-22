@@ -1,5 +1,5 @@
 import Logo from './assets/Logo_Cesas.svg';
-
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export default function Cabecalho() {
@@ -12,7 +12,7 @@ export default function Cabecalho() {
                         <a href="institucional">Institucional</a>
                     </li>
                     <li>
-                        <a href="area_aluno">Área do Aluno</a>
+                        <Link to="/login">Área do Aluno</Link>
                     </li>
                     <li>
                         <a href="cursos">Cursos</a>
@@ -21,10 +21,14 @@ export default function Cabecalho() {
                         <a href="perguntas_respostas">Perguntas e Respostas</a>
                     </li>
                     <li>
-                        <button className='botao-acessar'>Acessar</button>
+                        <Link to="/login">
+                            <button className='botao-acessar'>Acessar</button>
+                        </Link>
                     </li>
                     <li>
-                        <button className='botao-registrar'>Registrar</button>
+                        <Link to="/cadastro">
+                            <button className='botao-registrar'>Registrar</button>
+                        </Link>
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,255 @@
+/* Importando fontes (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Definindo as variáveis de cores fornecidas */
+:root {
+  --branco-destaque: #ffffff;
+  --azul-claro: #6598f7;
+  --azul-escuro: #2b4d8c;
+  --cinza-fundo: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--branco-destaque);
+}
+
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--azul-escuro);
+}
+
+.register-card {
+  background-color: var(--branco-destaque);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header h1 {
+  color: var(--azul-escuro);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.register-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--azul-claro);
+}
+
+.form-group input::placeholder {
+  font-size: 14px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+  accent-color: var(--azul-claro);
+  width: 16px;
+  height: 16px;
+}
+
+.forgot-password {
+  color: var(--azul-claro);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: var(--azul-escuro);
+  text-decoration: underline;
+}
+
+.register-button {
+  background-color: var(--azul-claro);
+  color: var(--branco-destaque);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-content: center;
+}
+
+.register-button:hover {
+  background-color: var(--azul-escuro);
+}
+
+.button-container {
+  text-align: center;
+}
+
+.register-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-link {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.signup-link:hover {
+  color: var(--azul-escuro);
+  text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 500px) {
+  .register-card {
+    padding: 25px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.form-group select {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+  appearance: auto;
+  /* permite que o navegador mostre a seta para baixo */
+  cursor: pointer;
+}
+
+/* Estilo para o dropdown quando está focado */
+.form-group select:focus {
+  outline: none;
+  border-color: #6598f7;
+  box-shadow: 0 0 0 2px rgba(101, 152, 247, 0.2);
+}
+
+/* Estilo para as opções */
+.form-group select option {
+  padding: 10px;
+}
+
+.student-state-checkbox {
+  display: flex;
+  gap: 1.5rem; /* espaçamento entre os botões */
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.student-state-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.student-state-checkbox input[type="radio"] {
+  accent-color: #2563eb; /* azul bonito do Tailwind (opcional) */
+  transform: scale(1.2); /* aumenta o tamanho do radio */
+}
+
+.form-group.image {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  max-width: 300px;
+}
+
+.form-group.image label {
+  font-weight: bold;
+  font-size: 0.5 rem;
+  color: #333;
+}
+
+.form-group.image input[type="file"] {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.form-group.image input[type="file"]:hover {
+  border-color: #007bff;
+}
+
+.form-group.image .preview {
+  margin-top: 0.5rem;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
