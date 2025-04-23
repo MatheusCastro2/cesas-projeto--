@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+Projeto CESAS - Educação de Jovens e Adultos Profissionais
+📝 Descrição do Projeto
+Este projeto foi desenvolvido como trabalho acadêmico para a faculdade, com o objetivo de criar uma solução tecnológica para o Centro Educacional SESAS (CESAS), instituição pública que oferece Educação de Jovens e Adultos (EJA) e cursos profissionalizantes no Distrito Federal.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎯 Objetivo
+Desenvolver um site institucional moderno e funcional para:
 
-Currently, two official plugins are available:
+Melhorar a comunicação entre a escola e a comunidade
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Facilitar o acesso às informações sobre cursos e matrículas
 
-## Expanding the ESLint configuration
+Divulgar a oferta de educação profissional gratuita
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Solucionar problemas de informação e acesso identificados na instituição
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✨ Funcionalidades Principais
+✅ Página inicial informativa sobre a escola e seus programas
+✅ Seção de perguntas frequentes interativa
+✅ Sistema de cadastro/login para interessados nos cursos
+✅ Calendário acadêmico e informações sobre cursos
+✅ Design responsivo para acesso em qualquer dispositivo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🛠 Tecnologias Utilizadas
+Frontend: React.js, TypeScript, CSS Modules
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Roteamento: React Router DOM
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Versionamento: Git/GitHub
+
+Design: UI/UX acessível e intuitiva
+
+🌟 Como Contribuir
+Este é um projeto colaborativo desenvolvido por:
+Igor Daniel
+Matheus Castro
+Matheus Cavalcante
+Vitor Banuth
+
+Clone o repositório
+
+Instale as dependências com npm install
+
+Execute o projeto com npm run dev
+
+📌 Próximos Passos
+Implementar backend para matrículas online
+
+Adicionar área do aluno
+
+Tradução para libras (acessibilidade)
+
+Integração com redes sociais da escola
+
+📚 Sobre o CESAS
+O CESAS é uma escola pública da Secretaria de Estado de Educação do DF que oferece educação profissional gratuita para jovens e adultos, contribuindo para a qualificação profissional e inclusão social.
+
+"Educação não transforma o mundo. Educação muda pessoas. Pessoas transformam o mundo." - Paulo Freire
