@@ -547,7 +547,7 @@ export default function Register(): ReactElement {
                         </div>
                     </form>
                     <div className="login-footer">
-                        <p>Já tem uma conta? <a href="#" className="signup-link">Acesse</a></p>
+                        <p>Já é Aluno? <a href="/login" className="signup-link">Acesse</a></p>
                     </div>
                 </div>
             </div>

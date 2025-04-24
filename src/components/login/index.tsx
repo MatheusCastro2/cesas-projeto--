@@ -62,7 +62,7 @@ export default function Login(): ReactElement {
                         </div>
                     </form>
                     <div className="login-footer">
-                        <p>Não tem uma conta? <a href="#" className="signup-link">Cadastre-se</a></p>
+                        <p>Não é Aluno? <a href="/cadastro" className="signup-link">Matricule-se</a></p>
                     </div>
                 </div>
             </div>
