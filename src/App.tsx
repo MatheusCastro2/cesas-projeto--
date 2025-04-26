@@ -8,6 +8,8 @@ import Rodape from './components/rodape'
 import Login from './components/login'
 import Register from './components/cadastro'
 import PerguntasRespostas from './components/perguntas_respostas'
+import Equipe_pagina from './components/equipe_pagina'
+import Curso from './components/cursos'
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Register />} />
         <Route path="/perguntas_respostas" element={<PerguntasRespostas />} />
+        <Route path="/equipe_pagina" element={<Equipe_pagina />} />
+        <Route path='/cursos' element={<Curso />} />
       </Routes>
       
       {/* Rodapé fixo em todas as rotas */}

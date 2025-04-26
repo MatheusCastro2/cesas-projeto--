@@ -8,9 +8,7 @@ export default function Cabecalho() {
             <img src={Logo} alt="Logo CESAS" className='logo' />
             <nav>
                 <ul className='lista-cabecalho'>
-                    <li>
-                        <a href="institucional">Institucional</a>
-                    </li>
+                    
                     <li>
                         <Link to="/login">Área do Aluno</Link>
                     </li>

@@ -71,7 +71,7 @@
   transition: background-color 0.2s ease;
 }
 
-.botao-imagem:hover {
+.botao-imagem.houver-simulado {
   background-color: #3b82f6;
 }
 

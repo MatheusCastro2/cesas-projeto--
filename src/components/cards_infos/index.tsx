@@ -29,7 +29,7 @@ export default function Cards() {
               <div className="detalhes">
                 <p>{card.detalhes}</p>
               </div>
-              <button className="botao-imagem" onClick={() => alternarCard(index)}>
+              <button className="botao-imagem houver-simulado" onClick={() => alternarCard(index)}>
                 <img src={Seta} alt="Expandir card" />
               </button>
             </div>
