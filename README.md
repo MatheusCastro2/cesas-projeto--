@@ -1,57 +1,36 @@
-Projeto CESAS - Educação de Jovens e Adultos Profissionais
-📝 Descrição do Projeto
-Este projeto foi desenvolvido como trabalho acadêmico para a faculdade, com o objetivo de criar uma solução tecnológica para o Centro Educacional SESAS (CESAS), instituição pública que oferece Educação de Jovens e Adultos (EJA) e cursos profissionalizantes no Distrito Federal.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-🎯 Objetivo
-Desenvolver um site institucional moderno e funcional para:
+## Getting Started
 
-Melhorar a comunicação entre a escola e a comunidade
+First, run the development server:
 
-Facilitar o acesso às informações sobre cursos e matrículas
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Divulgar a oferta de educação profissional gratuita
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Solucionar problemas de informação e acesso identificados na instituição
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-✨ Funcionalidades Principais
-✅ Página inicial informativa sobre a escola e seus programas
-✅ Seção de perguntas frequentes interativa
-✅ Sistema de cadastro/login para interessados nos cursos
-✅ Calendário acadêmico e informações sobre cursos
-✅ Design responsivo para acesso em qualquer dispositivo
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-🛠 Tecnologias Utilizadas
-Frontend: React.js, TypeScript, CSS Modules
+## Learn More
 
-Roteamento: React Router DOM
+To learn more about Next.js, take a look at the following resources:
 
-Versionamento: Git/GitHub
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Design: UI/UX acessível e intuitiva
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-🌟 Como Contribuir
-Este é um projeto colaborativo desenvolvido por:
-Igor Daniel
-Matheus Castro
-Matheus Cavalcante
-Vitor Banuth
+## Deploy on Vercel
 
-Clone o repositório
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Instale as dependências com npm install
-
-Execute o projeto com npm run dev
-
-📌 Próximos Passos
-Implementar backend para matrículas online
-
-Adicionar área do aluno
-
-Tradução para libras (acessibilidade)
-
-Integração com redes sociais da escola
-
-📚 Sobre o CESAS
-O CESAS é uma escola pública da Secretaria de Estado de Educação do DF que oferece educação profissional gratuita para jovens e adultos, contribuindo para a qualificação profissional e inclusão social.
-
-"Educação não transforma o mundo. Educação muda pessoas. Pessoas transformam o mundo." - Paulo Freire
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
