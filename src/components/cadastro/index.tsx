@@ -19,7 +19,7 @@ interface StudentData {
     landlinePhone: string,
     emergencyPhone: string,
     shift: string,
-    registrationType: string,
+    applyType: string,
     ethnicity: string,
     legacyStudent: boolean
     disabledStudent: boolean,
@@ -31,6 +31,9 @@ interface StudentData {
     studentMedicalReport?: File | null,
     address: string,
     cep: string
+}
+
+function captureData() {
 
 }
 
@@ -54,7 +57,7 @@ export default function Register(): ReactElement {
         landlinePhone: '',
         emergencyPhone: '',
         shift: '',
-        registrationType: '',
+        applyType: '',
         ethnicity: '',
         legacyStudent: false,
         disabledStudent: false,
@@ -114,6 +117,7 @@ export default function Register(): ReactElement {
                             <label htmlFor="email">E-mail</label>
                             <input
                                 type="email"
+                                name="email"
                                 id="email"
                                 value={studentData.email}
                                 onChange={handleInputChange}
@@ -124,22 +128,23 @@ export default function Register(): ReactElement {
                         </div>
 
                         <div className='form-group dropdown'>
-                            <label htmlFor='registration-type'>Matrícula para: </label>
+                            <label htmlFor='applyType'>Matrícula para: </label>
                             <select
-                                id="tipo-matricula"
-                                name="tipo-matricula"
-                                value={studentData.registrationType}
+                                id="applyType"
+                                name="applyType"
+                                value={studentData.applyType}
                                 onChange={handleInputChange}
                                 required
                             >
-                                <option value="matutino">Ensino Fundamental I - 1ª a 4ª etapa (15 anos completos)</option>
-                                <option value="vespertino">Ensino Fundamental II - 5ª a 8ª etapa (15 anos completos)</option>
-                                <option value="noturno">Ensino Médio - 1º ao 3º ano (18 anos completos)</option>
+                                <option value="" disabled>Selecione o tipo da matrícula</option>
+                                <option value="EF1">Ensino Fundamental I - 1ª a 4ª etapa (15 anos completos)</option>
+                                <option value="EF2">Ensino Fundamental II - 5ª a 8ª etapa (15 anos completos)</option>
+                                <option value="EM">Ensino Médio - 1º ao 3º ano (18 anos completos)</option>
                             </select>
                         </div>
                         <br></br>
                         <div className='form-group dropdown'>
-                            <label htmlFor='shift'>Turno</label>
+                            <label htmlFor='shift'>Turno: </label>
                             <select
                                 id="shift"
                                 name="shift"
@@ -147,6 +152,7 @@ export default function Register(): ReactElement {
                                 onChange={handleInputChange}
                                 required
                             >
+                                <option value="" disabled>Selecione o turno</option>
                                 <option value="matutino">Matutino (07:50-12:00)</option>
                                 <option value="vespertino">Vespertino (15:50-18:00)</option>
                                 <option value="noturno">Noturno (19:00-23:00)</option>
@@ -238,7 +244,7 @@ export default function Register(): ReactElement {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="text">Nome</label>
+                            <label htmlFor="text">Nome Completo</label>
                             <input
                                 type="text"
                                 id="nome"
@@ -261,6 +267,24 @@ export default function Register(): ReactElement {
                                 onChange={handleInputChange}
                                 placeholder="Nome social"
                             />
+                        </div>
+
+                        <br></br>
+
+                        <div className='form-group dropdown'>
+                            <label htmlFor='ethnicity'>Genêro:</label>
+                            <select
+                                id="gender"
+                                name="gender"
+                                value={studentData.gender}
+                                onChange={handleInputChange}
+                                required
+                            >
+                                <option value="" disabled>Selecione seu genêro</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="nao-binario">Não-Binário</option>
+                            </select>
                         </div>
 
                         <br></br>
@@ -344,7 +368,7 @@ export default function Register(): ReactElement {
                             <input
                                 type="date"
                                 id="expeditionDate"
-                                name="expDate"
+                                name="idExpDate"
                                 value={studentData.idExpDate}
                                 onChange={handleInputChange}
                                 required
@@ -376,18 +400,19 @@ export default function Register(): ReactElement {
                         <div className='form-group dropdown'>
                             <label htmlFor='ethnicity'>Cor/Raça</label>
                             <select
-                                id="tipo-etnia"
-                                name="tipo-etnia"
+                                id="ethnicity"
+                                name="ethnicity"
                                 value={studentData.ethnicity}
                                 onChange={handleInputChange}
                                 required
                             >
-                                <option value="matutino">Amarela</option>
-                                <option value="vespertino">Branca</option>
-                                <option value="noturno">Parda</option>
-                                <option value="noturno">Preta</option>
-                                <option value="noturno">Indígena</option>
-                                <option value="noturno">Não declarada</option>
+                                <option value="" disabled>Selecione sua etnia</option>
+                                <option value="amarela">Amarela</option>
+                                <option value="branca">Branca</option>
+                                <option value="parda">Parda</option>
+                                <option value="preta">Preta</option>
+                                <option value="indigena">Indígena</option>
+                                <option value="nao-declarada">Não declarada</option>
                             </select>
                         </div>
 
@@ -464,6 +489,7 @@ export default function Register(): ReactElement {
                             <input
                                 type="text"
                                 id="emergencyPhone"
+                                name="emergencyPhone"
                                 value={studentData.emergencyPhone}
                                 onChange={handleInputChange}
                                 placeholder="Exemplo: (12) 34567-8901"
