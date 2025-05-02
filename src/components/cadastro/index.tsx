@@ -33,9 +33,9 @@ interface StudentData {
     cep: string
 }
 
-function captureData() {
+// function captureData() {
 
-}
+// }
 
 export default function Register(): ReactElement {
 
@@ -98,9 +98,35 @@ export default function Register(): ReactElement {
 
     }
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('Dados do cadastro:', studentData);
+        try {
+            const formData = new FormData();
+    
+            for (const [key, value] of Object.entries(studentData)) {
+                if (value instanceof File || value === null) continue; 
+                formData.append(key, value as string);
+            }
+    
+            if (studentData.studentPhoto) formData.append('studentPhoto', studentData.studentPhoto);
+            if (studentData.studentId) formData.append('studentId', studentData.studentId);
+            if (studentData.studentProofOfResidence) formData.append('studentProofOfResidence', studentData.studentProofOfResidence);
+            if (studentData.studentAcademicRecord) formData.append('studentAcademicRecord', studentData.studentAcademicRecord);
+            if (studentData.studentMedicalReport) formData.append('studentMedicalReport', studentData.studentMedicalReport);
+    
+            const response = await fetch('http://localhost:3001/api/students', {
+                method: 'POST',
+                body: formData,
+            });
+    
+            if (!response.ok) throw new Error('Erro ao enviar dados');
+    
+            alert('Dados enviados com sucesso!');
+        } catch (err) {
+            console.error(err);
+            alert('Erro ao enviar formulário.');
+        }
     }
 
 
