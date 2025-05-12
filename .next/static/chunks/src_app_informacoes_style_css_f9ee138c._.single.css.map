@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/informacoes/style.css"],"sourcesContent":[".card-informacoes {\n    display: flex;\n    align-items: stretch;\n    justify-content: center;\n    gap: 0;\n    border-radius: 20px;\n    overflow: hidden;\n    max-width: 1100px;\n    margin: 4rem auto;\n    background-color: transparent;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\n  }\n  \n  .card-informacoes img {\n    width: 50%;\n    object-fit: cover;\n    height: 100%;\n    display: block;\n  }\n  \n  .card-informacoes p {\n    width: 50%;\n    margin: 0;\n    border-radius: 20px;\n    padding: 2rem;\n    background-color: #5a9bfc;\n    color: white;\n    font-size: 1rem;\n    line-height: 1.6;\n    display: flex;\n    align-items: center;\n  }\n  "],"names":[],"mappings":"AAAA;;;;;;;;;;;;;AAaE;;;;;;;AAOA"}}]
+}

@@ -1,0 +1,285 @@
+/* [project]/src/app/cabecalho/styles.css [app-client] (css) */
+.cabecalho {
+  background: #5a9bfc;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: .5rem 2rem;
+  display: flex;
+}
+
+.logo {
+  height: 40px;
+}
+
+.lista-cabecalho {
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.lista-cabecalho li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.lista-cabecalho li a:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.lista-cabecalho li a:hover:after {
+  width: 100%;
+}
+
+.botao-acessar {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-acessar:hover {
+  background-color: #2563eb;
+}
+
+.botao-registrar {
+  color: #3b82f6;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #3b82f6;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s, color .2s;
+}
+
+.botao-registrar:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+
+/* [project]/src/app/cards_infos/styles.css [app-client] (css) */
+.lista-cards {
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.lista-cards li {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #5a9bfc;
+  border-radius: 8px;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  transition: all .3s;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #0000000d;
+}
+
+.card h2, .card p {
+  color: #333;
+  margin: 1rem;
+  font-size: .9rem;
+}
+
+.detalhes {
+  opacity: 0;
+  max-height: 0;
+  padding: 0 1rem;
+  transition: max-height .4s, opacity .3s;
+  overflow: hidden;
+}
+
+.card.aberto .detalhes {
+  opacity: 1;
+  max-height: 200px;
+  margin-bottom: 1rem;
+}
+
+.botao-imagem {
+  cursor: pointer;
+  background-color: #5a9bfc;
+  border: none;
+  border-top: 2px solid #5a9bfc;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: .75rem;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.botao-imagem.hover-simulado {
+  background-color: #3b82f6;
+}
+
+.botao-imagem img {
+  width: 20px;
+  height: auto;
+  transition: transform .3s;
+}
+
+.card.aberto .botao-imagem img {
+  transform: rotate(180deg);
+}
+
+
+/* [project]/src/app/informacoes/style.css [app-client] (css) */
+.card-informacoes {
+  background-color: #0000;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  max-width: 1100px;
+  margin: 4rem auto;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 12px #0000000d;
+}
+
+.card-informacoes img {
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+  display: block;
+}
+
+.card-informacoes p {
+  color: #fff;
+  background-color: #5a9bfc;
+  border-radius: 20px;
+  align-items: center;
+  width: 50%;
+  margin: 0;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+}
+
+
+/* [project]/src/app/rodape/styles.css [app-client] (css) */
+footer {
+  text-align: left;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+footer h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-container {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+
+.links-rodape, .redes-sociais {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links-rodape li, .redes-sociais li {
+  align-items: center;
+  margin: .5rem 0;
+  display: flex;
+}
+
+.links-rodape a, .redes-sociais a {
+  color: #333;
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links-rodape a:hover, .redes-sociais a:hover {
+  color: #007bff;
+}
+
+.links-rodape img, .redes-sociais img {
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+
+.redes-sociais {
+  gap: 1rem;
+  display: flex;
+}
+
+.redes-sociais li {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+.redes-sociais li:hover {
+  transform: scale(1.1);
+}
+
+.redes-sociais li:first-child {
+  background-color: #00f;
+}
+
+.redes-sociais li:nth-child(2) {
+  background-color: purple;
+}
+
+.redes-sociais li:nth-child(3) {
+  background-color: green;
+}
+
+.redes-sociais li:nth-child(4) {
+  background-color: red;
+}
+
+
+/*# sourceMappingURL=src_app_3e859c38._.css.map*/

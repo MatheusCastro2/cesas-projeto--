@@ -1,0 +1,94 @@
+/* [project]/src/app/perguntas_respostas/styles.css [app-client] (css) */
+.perguntas-respostas {
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.perguntas-respostas h1 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.perguntas-respostas h2 {
+  color: #0d58c2;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.lista-perguntas {
+  padding: 0;
+  list-style: none;
+}
+
+.lista-perguntas li {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.pergunta {
+  background-color: #f8f9fa;
+  border-left: 5px solid #3498db;
+  padding: 20px;
+  transition: all .3s;
+}
+
+.pergunta.aberto {
+  background-color: #e9f5ff;
+}
+
+.pergunta h2 {
+  color: #2c3e50;
+  text-align: left;
+  cursor: pointer;
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.pergunta p {
+  color: #555;
+  border-top: 1px solid #ddd;
+  margin: 0;
+  padding-top: 10px;
+  line-height: 1.5;
+  display: none;
+}
+
+.pergunta.aberto p {
+  display: block;
+}
+
+.botao-imagem {
+  position: right;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+  transition: transform .3s;
+  top: 20px;
+  right: 20px;
+}
+
+.botao-imagem img {
+  width: 20px;
+  height: 20px;
+}
+
+.pergunta.aberto + .botao-imagem img {
+  transform: rotate(180deg);
+}
+
+.pergunta:hover {
+  background-color: #e9f5ff;
+}
+
+
+/*# sourceMappingURL=src_app_perguntas_respostas_styles_ed131d69.css.map*/

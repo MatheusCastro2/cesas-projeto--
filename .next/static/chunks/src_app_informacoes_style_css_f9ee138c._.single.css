@@ -1,0 +1,35 @@
+/* [project]/src/app/informacoes/style.css [app-client] (css) */
+.card-informacoes {
+  background-color: #0000;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  max-width: 1100px;
+  margin: 4rem auto;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 12px #0000000d;
+}
+
+.card-informacoes img {
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+  display: block;
+}
+
+.card-informacoes p {
+  color: #fff;
+  background-color: #5a9bfc;
+  border-radius: 20px;
+  align-items: center;
+  width: 50%;
+  margin: 0;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+}
+
+/*# sourceMappingURL=src_app_informacoes_style_css_f9ee138c._.single.css.map*/

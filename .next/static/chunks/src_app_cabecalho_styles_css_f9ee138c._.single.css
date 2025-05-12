@@ -1,0 +1,77 @@
+/* [project]/src/app/cabecalho/styles.css [app-client] (css) */
+.cabecalho {
+  background: #5a9bfc;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: .5rem 2rem;
+  display: flex;
+}
+
+.logo {
+  height: 40px;
+}
+
+.lista-cabecalho {
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.lista-cabecalho li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.lista-cabecalho li a:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.lista-cabecalho li a:hover:after {
+  width: 100%;
+}
+
+.botao-acessar {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-acessar:hover {
+  background-color: #2563eb;
+}
+
+.botao-registrar {
+  color: #3b82f6;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #3b82f6;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s, color .2s;
+}
+
+.botao-registrar:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+/*# sourceMappingURL=src_app_cabecalho_styles_css_f9ee138c._.single.css.map*/

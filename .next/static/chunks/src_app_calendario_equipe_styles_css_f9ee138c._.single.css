@@ -1,0 +1,43 @@
+/* [project]/src/app/calendario_equipe/styles.css [app-client] (css) */
+.calendario-equipe {
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 2rem 0;
+  list-style: none;
+  display: flex;
+}
+
+.calendario-equipe li {
+  display: flex;
+}
+
+.calendario-equipe button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #5a9bfc;
+  border: none;
+  border-radius: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 120px;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color .3s;
+  display: flex;
+}
+
+.calendario-equipe button:hover {
+  background-color: #3b82f6;
+}
+
+.calendario-equipe img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: .5rem;
+}
+
+/*# sourceMappingURL=src_app_calendario_equipe_styles_css_f9ee138c._.single.css.map*/

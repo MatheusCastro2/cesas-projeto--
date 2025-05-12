@@ -1,0 +1,85 @@
+/* [project]/src/app/cards_infos/styles.css [app-client] (css) */
+.lista-cards {
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.lista-cards li {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #5a9bfc;
+  border-radius: 8px;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  transition: all .3s;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #0000000d;
+}
+
+.card h2, .card p {
+  color: #333;
+  margin: 1rem;
+  font-size: .9rem;
+}
+
+.detalhes {
+  opacity: 0;
+  max-height: 0;
+  padding: 0 1rem;
+  transition: max-height .4s, opacity .3s;
+  overflow: hidden;
+}
+
+.card.aberto .detalhes {
+  opacity: 1;
+  max-height: 200px;
+  margin-bottom: 1rem;
+}
+
+.botao-imagem {
+  cursor: pointer;
+  background-color: #5a9bfc;
+  border: none;
+  border-top: 2px solid #5a9bfc;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: .75rem;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.botao-imagem.hover-simulado {
+  background-color: #3b82f6;
+}
+
+.botao-imagem img {
+  width: 20px;
+  height: auto;
+  transition: transform .3s;
+}
+
+.card.aberto .botao-imagem img {
+  transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=src_app_cards_infos_styles_css_f9ee138c._.single.css.map*/

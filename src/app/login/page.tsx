@@ -1,6 +1,7 @@
 'use client'
 import { FormEvent, ReactElement, useState } from 'react';
 import './styles.css';
+import Cabecalho from '../cabecalho';
 
 export default function Login(): ReactElement {
     const [email, setEmail] = useState('');
@@ -16,6 +17,7 @@ export default function Login(): ReactElement {
 
 
     return (
+        <> <Cabecalho/>
         <section className='login'>
             <div className="login-container">
                 <div className="login-card">
@@ -67,6 +69,7 @@ export default function Login(): ReactElement {
                 </div>
             </div>
         </section>
+        </>
     );
 }
 
