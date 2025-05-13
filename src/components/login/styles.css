@@ -27,7 +27,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: var(--azul-claro);
+  background-color: var(--cinza-fundo);
 }
 
 .login-card {
