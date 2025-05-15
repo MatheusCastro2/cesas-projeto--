@@ -4,6 +4,8 @@ export default function AdminPanel() {
   const [cursoEja, setCursoEja] = useState("Curso EJA - Educação de Jovens e Adultos")
   const [cursoProf, setCursoProf] = useState("Curso Profissionalizante")
   const [rodapeInfo, setRodapeInfo] = useState("Endereço: Rua X, Telefone: (61) 99999-9999")
+  const nomeCurso = localStorage.getItem("cursoEja") || "Curso EJA Padrão"
+
 
   const handleSalvar = () => {
     localStorage.setItem("cursoEja", cursoEja)
