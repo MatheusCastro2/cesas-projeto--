@@ -11,6 +11,7 @@ import PerguntasRespostas from './components/perguntas_respostas'
 import Equipe_pagina from './components/equipe_pagina'
 import CursoEja from './components/cursos_eja'
 import CursoProfissionalizante from './components/cursos_profissionalizante'
+import AdminPanel from './components/AdminPanel'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       
       {/* Conteúdo dinâmico baseado na rota */}
       <Routes>
+        <Route path="/admin" element={<AdminPanel />} />
         <Route path="/" element={
           <>
             <Informacoes />
