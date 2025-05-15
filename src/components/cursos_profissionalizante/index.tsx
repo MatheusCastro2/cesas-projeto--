@@ -4,7 +4,7 @@ import Computador from './assets/computador.png';
 import Assistente from './assets/assistente.png';
 import './style.css';
 
-export default function Curso() {
+export default function CursoProfissionalizante() {
 
     const [termoPesquisa, setTermoPesquisa] = useState('');
     const [cursos] = useState([

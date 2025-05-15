@@ -12,94 +12,82 @@ export default function Step4({ studentData, handleInputChange, nextPage, prevPa
     return (<div className="register-container">
         <div className="register-card">
             <div className="register-header">
-                <h1> Matrícula Online </h1>
-                <p>Para se matricular no EJA você precisa ter 15 anos completos para 1a ou 2a Etapa ou 18 anos completos se for estudar na 3a Etapa</p>
+                <h1> Matrícula Online no EJA</h1>
             </div>
-            <div className='form-group dropdown'>
-                <label htmlFor='ethnicity'>Cor/Raça</label>
-                <select
-                    id="ethnicity"
-                    name="ethnicity"
-                    value={studentData.ethnicity}
-                    onChange={handleInputChange}
-                    required
-                >
-                    <option value="" disabled>Selecione sua etnia</option>
-                    <option value="amarela">Amarela</option>
-                    <option value="branca">Branca</option>
-                    <option value="parda">Parda</option>
-                    <option value="preta">Preta</option>
-                    <option value="indigena">Indígena</option>
-                    <option value="nao-declarada">Não declarada</option>
-                </select>
-            </div>
-
-            <br></br>
-
             <div className="form-group">
-                <label htmlFor="text">Informe seu CEP</label>
+                <label htmlFor="text">Naturalidade do Estudante</label>
                 <input
                     type="text"
-                    id="cep"
-                    name="cep"
-                    value={studentData.cep}
+                    id="nationality"
+                    name="nationality"
+                    value={studentData.nationality}
                     onChange={handleInputChange}
-                    placeholder="Exemplo: 12345-678"
+                    placeholder="Exemplo: Brasileiro/Americano"
                     required />
             </div>
 
             <br></br>
 
             <div className="form-group">
-                <label htmlFor="text">Informe seu Endereço/Bairro/Cidade</label>
+                <label htmlFor="text">Estado de Residência</label>
                 <input
                     type="text"
-                    id="address"
-                    name="address"
-                    value={studentData.address}
+                    id="state"
+                    name="state"
+                    value={studentData.state}
                     onChange={handleInputChange}
-                    placeholder="Exemplo: Rua X/ Bairro Y/ Cidade Z"
+                    placeholder="Exemplo: DF"
                     required />
             </div>
 
             <br></br>
-
 
             <div className="form-group">
-                <label htmlFor="phone">Número de Celular (Com Prefixo)</label>
+                <label htmlFor="text">Numero de Identidade (RG)</label>
                 <input
                     type="text"
-                    id="cellphoneNumber"
-                    name='cellphoneNumber'
-                    value={studentData.cellphoneNumber}
+                    id="idNumber"
+                    name="idNumber"
+                    value={studentData.idNumber}
                     onChange={handleInputChange}
-                    placeholder="Exemplo: (12) 34567-8901"
+                    placeholder="Exemplo: 1.234.567"
                     required />
-                <br></br>
             </div>
+
+            <br></br>
 
             <div className="form-group">
-                <label htmlFor="phone">Número do Telefone Fixo (Com Prefixo)</label>
+                <label htmlFor="address">Data de Expedição da Identidade</label>
+                <input
+                    type="date"
+                    id="expeditionDate"
+                    name="idExpDate"
+                    value={studentData.idExpDate}
+                    onChange={handleInputChange}
+                    required />
+            </div>
+
+            <br></br>
+
+            <div className="form-group">
+                <label htmlFor="text">Orgão Expeditor da Identidade</label>
                 <input
                     type="text"
-                    id="landlinePhone"
-                    name='landlinePhone'
-                    value={studentData.landlinePhone}
+                    id="idIssuingBody"
+                    name="idIssuingBody"
+                    value={studentData.idIssuingBody}
                     onChange={handleInputChange}
-                    placeholder="Exemplo: (12) 34567-8901"
+                    placeholder="Exemplo: SSP/DF"
                     required />
             </div>
 
             <br></br>
             <br></br>
+
 
             <div className="button-container">
-                <button className="submit-button" onClick={() => prevPage()}>Voltar</button>
-                <button className="submit-button" onClick={() => nextPage()}>Prosseguir</button>
-            </div>
-
-            <div className="register-footer">
-                <p>Já é Aluno? <a href="/login" className="signup-link">Acesse a Área do Aluno</a></p>
+                <button type='button' className="pagination-button" onClick={() => prevPage()}>Voltar</button>
+                <button type='button' className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
             </div>
         </div>
     </div>

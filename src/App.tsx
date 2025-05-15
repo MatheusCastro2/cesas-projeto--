@@ -9,7 +9,8 @@ import Login from './components/login'
 import Register from './components/cadastro'
 import PerguntasRespostas from './components/perguntas_respostas'
 import Equipe_pagina from './components/equipe_pagina'
-import Curso from './components/cursos'
+import CursoEja from './components/cursos_eja'
+import CursoProfissionalizante from './components/cursos_profissionalizante'
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
         <Route path="/cadastro" element={<Register />} />
         <Route path="/perguntas_respostas" element={<PerguntasRespostas />} />
         <Route path="/equipe_pagina" element={<Equipe_pagina />} />
-        <Route path='/cursos' element={<Curso />} />
+        <Route path='/cursos_eja' element={<CursoEja />} />
+        <Route path='/cursos_profissionalizante' element={<CursoProfissionalizante/>} />
       </Routes>
       
       {/* Rodapé fixo em todas as rotas */}

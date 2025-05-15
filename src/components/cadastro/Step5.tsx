@@ -4,91 +4,97 @@ import { StudentData } from '.';
 interface Props {
     studentData: StudentData;
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void;
-    setStudentData: React.Dispatch<React.SetStateAction<StudentData>>;
     nextPage: () => void;
     prevPage: () => void;
 }
 
-export default function Step5({ studentData, handleInputChange, setStudentData, nextPage, prevPage }: Props) {
+export default function Step5({ studentData, handleInputChange, nextPage, prevPage }: Props) {
     return (<div className="register-container">
         <div className="register-card">
             <div className="register-header">
-                <h1> Matrícula Online </h1>
-                <p>Para se matricular no EJA você precisa ter 15 anos completos para 1a ou 2a Etapa ou 18 anos completos se for estudar na 3a Etapa</p>
+                <h1> Matrícula Online no EJA</h1>
             </div>
-            <div className="form-group">
-                <label htmlFor="address">Nome do Responsável (Para Alunos Menores de Idade)</label>
-                <input
-                    type="text"
-                    id="responsibleName"
-                    name='responsibleName'
-                    value={studentData.responsibleName}
+            <div className='form-group dropdown'>
+                <label htmlFor='ethnicity'>Cor/Raça</label>
+                <select
+                    id="ethnicity"
+                    name="ethnicity"
+                    value={studentData.ethnicity}
                     onChange={handleInputChange}
-                    placeholder="Nome do seu Responsável" />
-                <br></br>
+                    required
+                >
+                    <option value="" disabled>Selecione sua etnia</option>
+                    <option value="amarela">Amarela</option>
+                    <option value="branca">Branca</option>
+                    <option value="parda">Parda</option>
+                    <option value="preta">Preta</option>
+                    <option value="indigena">Indígena</option>
+                    <option value="nao-declarada">Não declarada</option>
+                </select>
             </div>
-            <div className="form-group">
-                <label htmlFor="address">CPF da Mãe (Para Alunos Menores de Idade) </label>
-                <input
-                    type="text"
-                    id="responsibleId"
-                    name='responsibleId'
-                    value={studentData.responsibleId}
-                    onChange={handleInputChange}
-                    placeholder="Exemplo: 123.456.789-01" />
-                <br></br>
-            </div>
+
             <br></br>
+
             <div className="form-group">
-                <label htmlFor="phone">Número de Telefone de Emergência (Com Prefixo)</label>
+                <label htmlFor="text">Informe seu CEP</label>
                 <input
                     type="text"
-                    id="emergencyPhone"
-                    name="emergencyPhone"
-                    value={studentData.emergencyPhone}
+                    id="cep"
+                    name="cep"
+                    value={studentData.cep}
+                    onChange={handleInputChange}
+                    placeholder="Exemplo: 12345-678"
+                    required />
+            </div>
+
+            <br></br>
+
+            <div className="form-group">
+                <label htmlFor="text">Informe seu Endereço/Bairro/Cidade</label>
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value={studentData.address}
+                    onChange={handleInputChange}
+                    placeholder="Exemplo: Rua X/ Bairro Y/ Cidade Z"
+                    required />
+            </div>
+
+            <br></br>
+
+
+            <div className="form-group">
+                <label htmlFor="phone">Número de Celular (Com Prefixo)</label>
+                <input
+                    type="text"
+                    id="cellphoneNumber"
+                    name='cellphoneNumber'
+                    value={studentData.cellphoneNumber}
+                    onChange={handleInputChange}
+                    placeholder="Exemplo: (12) 34567-8901"
+                    required />
+                <br></br>
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="phone">Número do Telefone Fixo (Com Prefixo)</label>
+                <input
+                    type="text"
+                    id="landlinePhone"
+                    name='landlinePhone'
+                    value={studentData.landlinePhone}
                     onChange={handleInputChange}
                     placeholder="Exemplo: (12) 34567-8901"
                     required />
             </div>
-            <br></br>
-            <div className='form-group checkbox'>
-                <label htmlFor='student-state'>Caso você não tenha Histórico ou Certificado de Conclusão, Faça o exame para descobrir sua série. Necessita de exame de classificação ou reclassificação?</label>
-                <div className='student-state-checkbox'>
-                    <label>
-                        <input
-                            type="radio"
-                            name="recorlessStudent"
-                            value="true"
-                            checked={studentData.disabledStudent === true}
-                            onChange={(e) => setStudentData({
-                                ...studentData,
-                                disabledStudent: e.target.value === "true",
-                            })} />
-                        Sim
-                    </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            name="recordlessStudent"
-                            value="false"
-                            checked={studentData.disabledStudent === false}
-                            onChange={(e) => setStudentData({
-                                ...studentData,
-                                disabledStudent: e.target.value === "true",
-                            })} />
-                        Não
-                    </label>
-                </div>
-            </div>
+            <br></br>
+            <br></br>
 
             <div className="button-container">
-                <button className="submit-button" onClick={() => prevPage()}>Voltar</button>
-                <button className="submit-button" onClick={() => nextPage()}>Prosseguir</button>
-            </div>
-
-            <div className="register-footer">
-                <p>Já é Aluno? <a href="/login" className="signup-link">Acesse a Área do Aluno</a></p>
+                <button type='button' className="pagination-button" onClick={() => prevPage()}>Voltar</button>
+                <button type='button' className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
             </div>
         </div>
     </div>

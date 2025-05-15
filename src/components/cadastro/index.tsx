@@ -6,6 +6,7 @@ import Step3 from './Step3';
 import Step4 from './Step4';
 import Step5 from './Step5';
 import Step6 from './Step6';
+import Step7 from './Step7';
 
 export interface StudentData {
     name: string,
@@ -82,21 +83,24 @@ export default function Register(): ReactElement {
     const renderStep = () => {
         switch (step) {
             case 1:
-                return <Step1 studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} />;
+                return <Step1  nextPage={nextPage} />;
             case 2:
-                return <Step2 studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step2  studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
             case 3:
-                return <Step3 studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step3  studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
             case 4:
-                return <Step4 studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step4  studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
             case 5:
-                return <Step5 studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step5  studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
             case 6:
-                return <Step6 handleInputChange={handleInputChange} prevPage={prevPage} />;
+                return <Step6  studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
+            case 7:
+                return <Step7  handleInputChange={handleInputChange} prevPage={prevPage} />;
             default:
                 return null;
         }
     };
+
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
         const { name, value } = e.target;
