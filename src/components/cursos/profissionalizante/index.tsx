@@ -1,14 +1,14 @@
 import { useState } from "react";
-import Culiaria from './assets/culinaria.png';
-import Computador from './assets/computador.png';
-import Assistente from './assets/assistente.png';
-import './style.css';
+import Culiaria from '../assets/culinaria.png';
+import Computador from '../assets/computador.png';
+import Assistente from '../assets/assistente.png';
+import '../style.css';
 
 export default function CursoProfissionalizante() {
 
     const [termoPesquisa, setTermoPesquisa] = useState('');
     const [cursos] = useState([
-        { id: 1, nome: 'Cozinheiro-Vespertino', descricao: 'Descrição do Curso ', imagem: Culiaria },
+        { id: 1, nome: 'Cozinheiro', descricao: 'Descrição do Curso ', imagem: Culiaria },
         { id: 2, nome: 'Operador de Computador', descricao: 'Descrição do Curso ', imagem: Computador },
         { id: 3, nome: 'Assistente Administrativo', descricao: 'Descrição do Curso ', imagem: Assistente },
     ])

@@ -1,16 +1,16 @@
 import { useState } from "react";
-import Culiaria from './assets/culinaria.png';
-import Computador from './assets/computador.png';
-import Assistente from './assets/assistente.png';
-import './style.css';
+import Etapa1 from '../assets/etapa1.png';
+import Etapa2 from '../assets/etapa2.jpg';
+import Etapa3 from '../assets/etapa3.jpg';
+import '../style.css';
 
 export default function CursoEja() {
 
     const [termoPesquisa, setTermoPesquisa] = useState('');
     const [cursos] = useState([
-        { id: 1, nome: '1a Etapa', descricao: 'Descrição do Curso ', imagem: Culiaria },
-        { id: 2, nome: '2a Etapa', descricao: 'Descrição do Curso ', imagem: Computador },
-        { id: 3, nome: '3a Etapa', descricao: 'Descrição do Curso ', imagem: Assistente },
+        { id: 1, nome: '1a Etapa', descricao: 'Descrição do Curso ', imagem: Etapa1 },
+        { id: 2, nome: '2a Etapa', descricao: 'Descrição do Curso ', imagem: Etapa2 },
+        { id: 3, nome: '3a Etapa', descricao: 'Descrição do Curso ', imagem: Etapa3 },
     ])
 
     const cursosFiltrados = cursos.filter(curso =>

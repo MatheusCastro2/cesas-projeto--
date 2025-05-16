@@ -1,5 +1,5 @@
 import { FormEvent, ReactElement, useState } from 'react';
-import './styles.css';
+import '../styles.css';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
@@ -40,7 +40,7 @@ export interface StudentData {
     cep: string
 }
 
-export default function Register(): ReactElement {
+export default function RegisterEJA(): ReactElement {
 
     const [step, setStep] = useState(1);
 

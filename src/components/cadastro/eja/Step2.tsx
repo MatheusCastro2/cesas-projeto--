@@ -75,7 +75,7 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                                     ...studentData,
                                     legacyStudent: e.target.value === "true",
                                 })} />
-                            Matrícula nova
+                            Estou retornando ao CESAS
                         </label>
 
                         <label>
@@ -88,7 +88,7 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                                     ...studentData,
                                     legacyStudent: e.target.value === "true",
                                 })} />
-                            Estou retornando ao CESAS
+                            Matrícula nova
                         </label>
                     </div>
                 </div>

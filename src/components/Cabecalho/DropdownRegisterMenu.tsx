@@ -9,11 +9,10 @@ return(
     <div className="dropdown-menu">
         <ul>
             <li>
-                <Link to="/cursos_eja" onClick={onClose}>EJA </Link>
-                
+                <Link to="/cadastro/eja" onClick={onClose}>EJA </Link>
             </li>
             <li>
-                <Link to="/cursos_profissionalizante" onClick={onClose}> Profissionalizante </Link>
+                <Link to="/cadastro/profissionalizante" onClick={onClose}> Profissionalizante </Link>
             </li>
         </ul>
     </div>

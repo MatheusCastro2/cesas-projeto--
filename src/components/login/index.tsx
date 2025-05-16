@@ -3,8 +3,6 @@ import './styles.css';
 
 export default function Login(): ReactElement {
 
-
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
