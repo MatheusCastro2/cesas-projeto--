@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 interface Props {
     onClose: () => void;
 }
-export default function DropdownCoursesMenu({onClose} : Props) {
+export default function DropdownRegisterMenu({onClose} : Props) {
 return(
     <div className="dropdown-menu">
         <ul>

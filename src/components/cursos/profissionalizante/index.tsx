@@ -3,6 +3,7 @@ import Culiaria from '../assets/culinaria.png';
 import Computador from '../assets/computador.png';
 import Assistente from '../assets/assistente.png';
 import '../style.css';
+import { Link } from "react-router-dom";
 
 export default function CursoProfissionalizante() {
 
@@ -18,17 +19,17 @@ export default function CursoProfissionalizante() {
         curso.descricao.toLowerCase().includes(termoPesquisa.toLowerCase())
     );
 
-    return(
+    return (
 
         <div>
-            
+
 
             {/* Barra de Pesquisa */}
-            <input className="barra-pesquisa" 
-            type = "text"
-            placeholder = "Pesquisar cursos..."
-            value = {termoPesquisa}
-            onChange = {(e) => setTermoPesquisa(e.target.value)}
+            <input className="barra-pesquisa"
+                type="text"
+                placeholder="Pesquisar cursos..."
+                value={termoPesquisa}
+                onChange={(e) => setTermoPesquisa(e.target.value)}
             />
 
             <h1 className="texto-de-cursos">Cursos Disponiveis</h1>
@@ -40,11 +41,17 @@ export default function CursoProfissionalizante() {
                         <div className="curso-info">
                             <h2>{curso.nome}</h2>
                             <p>{curso.descricao}</p>
-                            <button className="botao-inscrever">Inscreva-se</button>
+                            <Link to={"/cadastro/profissionalizante"}>
+                                <button className="botao-inscrever">Inscreva-se</button>
+                            </Link>
                         </div>
                     </li>
                 ))}
             </ul>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
         </div>
 

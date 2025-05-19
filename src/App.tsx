@@ -12,11 +12,11 @@ import PerguntasRespostas from './components/perguntas_respostas'
 import Equipe_pagina from './components/equipe_pagina'
 import CursoEja from './components/cursos/eja'
 import CursoProfissionalizante from './components/cursos/profissionalizante'
+import Video from './components/video'
 
 function App() {
   return (
     <div className='container'>
-      {/* Cabeçalho fixo em todas as rotas */}
       <Cabecalho />
       
       {/* Conteúdo dinâmico baseado na rota */}
@@ -24,7 +24,8 @@ function App() {
         <Route path="/" element={
           <>
             <Informacoes />
-            <Cards />
+            <Cards/>
+            <Video />
             <CalendarioEquipe />
           </>
         } />

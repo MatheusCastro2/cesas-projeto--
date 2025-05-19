@@ -20,6 +20,8 @@
     font-size: 2rem;
 }
 
+
+
 .barra-pesquisa {
     width: 100%;
     max-width: 600px;
@@ -45,7 +47,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
-    
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 
 .lista-cursos li {
@@ -82,6 +85,7 @@
     margin: 0 0 15px 0;
     font-size: 0.9rem;
 }
+ 
 
 .botao-inscrever {
     background-color: #3498db;

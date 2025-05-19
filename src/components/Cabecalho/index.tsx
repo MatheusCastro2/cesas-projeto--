@@ -1,6 +1,6 @@
 import Logo from './assets/Logo_Cesas.jpeg';
 import { Link } from 'react-router-dom';
-import DropdownCoursesMenu from './DropdownRegisterMenu';
+import DropdownCoursesMenu from './DropdownCoursesMenu';
 import DropdownRegisterMenu from './DropdownRegisterMenu';
 import './styles.css';
 import { useState } from 'react';
@@ -32,9 +32,6 @@ export default function Cabecalho() {
                         <Link to="/perguntas_respostas" onClick={() => setCoursesDropdownOpen(false)} > Perguntas e Respostas </Link>
                     </li>
                     <li className='dropdown-container'>
-                        {/* <Link to="/cadastro" onClick={() => setDropdownOpen(false)}>
-                            <button className='botao-registrar'>Matricular-se</button>
-                        </Link> */}
                         <button className="botao-registrar" onClick={() => setRegisterDropdownOpen(!registerDropdownOpen)}>Matricular-se
                             <FiChevronDown />
                         </button>

@@ -3,6 +3,7 @@ import Etapa1 from '../assets/etapa1.png';
 import Etapa2 from '../assets/etapa2.jpg';
 import Etapa3 from '../assets/etapa3.jpg';
 import '../style.css';
+import { Link } from "react-router-dom";
 
 export default function CursoEja() {
 
@@ -18,17 +19,17 @@ export default function CursoEja() {
         curso.descricao.toLowerCase().includes(termoPesquisa.toLowerCase())
     );
 
-    return(
+    return (
 
-        <div>
-            
+        <div className="pagina-cursos">
+
 
             {/* Barra de Pesquisa */}
-            <input className="barra-pesquisa" 
-            type = "text"
-            placeholder = "Pesquisar cursos..."
-            value = {termoPesquisa}
-            onChange = {(e) => setTermoPesquisa(e.target.value)}
+            <input className="barra-pesquisa"
+                type="text"
+                placeholder="Pesquisar cursos..."
+                value={termoPesquisa}
+                onChange={(e) => setTermoPesquisa(e.target.value)}
             />
 
             <h1 className="texto-de-cursos">Cursos Disponiveis</h1>
@@ -40,12 +41,17 @@ export default function CursoEja() {
                         <div className="curso-info">
                             <h2>{curso.nome}</h2>
                             <p>{curso.descricao}</p>
-                            <button className="botao-inscrever">Inscreva-se</button>
+                            <Link to={"/cadastro/eja"}>
+                                <button className="botao-inscrever">Inscreva-se</button>
+                            </Link>
                         </div>
                     </li>
                 ))}
             </ul>
-
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
 
     )

@@ -13,7 +13,7 @@ export default function Step2({ studentData, handleInputChange,  prevPage }: Pro
         <div className="register-container">
             <div className="register-card">
                 <div className="register-header">
-                    <h1> Matrícula Online no EJA</h1>
+                    <h1> Matrícula Online no Profissionalizante</h1>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">E-mail</label>
