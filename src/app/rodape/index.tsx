@@ -40,8 +40,8 @@ export default function Rodape() {
             </a>
           </li>
           <li>
-            <a href="https://tvradiocesas.blogspot.com" target="_blank" rel="noopener noreferrer">
-              <img src={'/assets/icon_youtube.svg'} alt="Canal do CESAS no YouTube" />
+            <a href="https://www.youtube.com/@CREPlanoPiloto-tw8wj" target="_blank" rel="noopener noreferrer">
+              <img src={Youtube} alt="Canal do CESAS no YouTube" />
             </a>
           </li>
         </ul>

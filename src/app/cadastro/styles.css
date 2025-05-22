@@ -35,7 +35,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px;
+  width: 450px;
   padding: 40px;
 }
 
@@ -199,7 +199,8 @@ body {
 
 .student-state-checkbox {
   display: flex;
-  gap: 1.5rem; /* espaçamento entre os botões */
+  gap: 1.5rem;
+  /* espaçamento entre os botões */
   align-items: center;
   margin-top: 0.5rem;
 }
@@ -213,8 +214,8 @@ body {
 }
 
 .student-state-checkbox input[type="radio"] {
-  accent-color: #2563eb; 
-  transform: scale(1.2); 
+  accent-color: #2563eb;
+  transform: scale(1.2);
 }
 
 .form-group.image {
@@ -254,7 +255,7 @@ body {
   border: 1px solid #ddd;
 }
 
-.submit-button {
+.pagination-button {
   background-color: var(--azul-claro);
   color: var(--branco-destaque);
   border: none;
@@ -266,4 +267,24 @@ body {
   transition: background-color 0.3s;
   align-content: center;
   margin-right: 10px;
+}
+
+.submit-button {
+  background-color: var(--azul-escuro);
+  color: var(--branco-destaque);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-content: center;
+  margin-right: 10px;
+}
+
+p.attention {
+  color: red;
+  font-size: 18px;
+  align-content: center;
 }
