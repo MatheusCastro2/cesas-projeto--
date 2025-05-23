@@ -41,7 +41,7 @@ export default function Rodape() {
           </li>
           <li>
             <a href="https://www.youtube.com/@CREPlanoPiloto-tw8wj" target="_blank" rel="noopener noreferrer">
-              <img src={Youtube} alt="Canal do CESAS no YouTube" />
+              <img src={'assets/icon_youtube.svg'} alt="Canal do CESAS no YouTube" />
             </a>
           </li>
         </ul>

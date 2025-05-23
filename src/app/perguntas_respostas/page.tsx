@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import "./styles.css";
 import Cabecalho from "../cabecalho";
+import Rodape from "../rodape";
 
 export default function PerguntasRespostas() {
   const [abertos, setAbertos] = useState([false, false, false, false, false]);
@@ -55,6 +56,7 @@ export default function PerguntasRespostas() {
         ))}
       </ul>
     </section>
+    <Rodape/>
     </>
   );
 }

@@ -1,0 +1,562 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap";
+/* [project]/src/app/cadastro/styles.css [app-client] (css) */
+:root {
+  --branco-destaque: #fff;
+  --azul-claro: #6598f7;
+  --azul-escuro: #2b4d8c;
+  --cinza-fundo: #d9d9d9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--branco-destaque);
+}
+
+.register-container {
+  background-color: var(--azul-escuro);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+}
+
+.register-card {
+  background-color: var(--branco-destaque);
+  border-radius: 12px;
+  width: 450px;
+  padding: 40px;
+  box-shadow: 0 10px 25px #0000001a;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header h1 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.register-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.register-form {
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+}
+
+.form-group {
+  flex-direction: column;
+  display: flex;
+}
+
+.form-group label {
+  color: #444;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 16px;
+  transition: border-color .3s;
+}
+
+.form-group input:focus {
+  border-color: var(--azul-claro);
+  outline: none;
+}
+
+.form-group input::placeholder {
+  font-size: 14px;
+}
+
+.form-options {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  display: flex;
+}
+
+.remember-me {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.remember-me input[type="checkbox"] {
+  accent-color: var(--azul-claro);
+  width: 16px;
+  height: 16px;
+}
+
+.forgot-password {
+  color: var(--azul-claro);
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.forgot-password:hover {
+  color: var(--azul-escuro);
+  text-decoration: underline;
+}
+
+.register-button {
+  background-color: var(--azul-claro);
+  color: var(--branco-destaque);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  align-content: center;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color .3s;
+}
+
+.register-button:hover {
+  background-color: var(--azul-escuro);
+}
+
+.button-container {
+  text-align: center;
+}
+
+.register-footer {
+  text-align: center;
+  color: #666;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: var(--azul-claro);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.signup-link:hover {
+  color: var(--azul-escuro);
+  text-decoration: underline;
+}
+
+@media (width <= 500px) {
+  .register-card {
+    padding: 25px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.form-group select {
+  appearance: auto;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+.form-group select:focus {
+  border-color: #6598f7;
+  outline: none;
+  box-shadow: 0 0 0 2px #6598f733;
+}
+
+.form-group select option {
+  padding: 10px;
+}
+
+.student-state-checkbox {
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: .5rem;
+  display: flex;
+}
+
+.student-state-checkbox label {
+  cursor: pointer;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  display: flex;
+}
+
+.student-state-checkbox input[type="radio"] {
+  accent-color: #2563eb;
+  transform: scale(1.2);
+}
+
+.form-group.image {
+  flex-direction: column;
+  gap: .5rem;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.form-group.image label {
+  font-weight: bold;
+  font-size: .5 rem;
+  color: #333;
+}
+
+.form-group.image input[type="file"] {
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: .4rem;
+  font-size: .8rem;
+  transition: border .3s;
+}
+
+.form-group.image input[type="file"]:hover {
+  border-color: #007bff;
+}
+
+.form-group.image .preview {
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: .5rem;
+}
+
+.pagination-button {
+  background-color: var(--azul-claro);
+  color: var(--branco-destaque);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  align-content: center;
+  margin-right: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color .3s;
+}
+
+.submit-button {
+  background-color: var(--azul-escuro);
+  color: var(--branco-destaque);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  align-content: center;
+  margin-right: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color .3s;
+}
+
+p.attention {
+  color: red;
+  align-content: center;
+  font-size: 18px;
+}
+
+
+/* [project]/src/app/cabecalho/styles.css [app-client] (css) */
+.cabecalho {
+  background: #5a9bfc;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: .5rem 2rem;
+  display: flex;
+}
+
+.logo {
+  height: 40px;
+}
+
+.lista-cabecalho {
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  list-style: none;
+  display: flex;
+}
+
+.lista-cabecalho li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.lista-cabecalho li a:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.lista-cabecalho li a:hover:after {
+  width: 100%;
+}
+
+.botao-acessar {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-acessar:hover {
+  background-color: #2563eb;
+}
+
+.botao-registrar {
+  color: #3b82f6;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #3b82f6;
+  border-radius: 9999px;
+  align-items: center;
+  gap: .3rem;
+  padding: .4rem 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color .2s, color .2s;
+  display: flex;
+}
+
+.botao-registrar:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  color: #fff;
+  background: #5a9bfc;
+  border: none;
+  align-items: center;
+  gap: .3rem;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background-color .2s, color .2s;
+  display: flex;
+}
+
+.dropdown-toggle:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+.dropdown-menu {
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: .5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  margin: .3rem 0;
+}
+
+.dropdown-menu li a {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown-menu li a:after {
+  content: "";
+  background: #5a9bfc;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.dropdown-menu li a:hover:after {
+  width: 100%;
+}
+
+.dropdown-container .dropdown-toggle {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown-container .dropdown-toggle:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.dropdown-container .dropdown-toggle:hover:after {
+  width: 100%;
+}
+
+
+/* [project]/src/app/rodape/styles.css [app-client] (css) */
+footer {
+  text-align: left;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+footer h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-container {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+
+.links-rodape, .redes-sociais {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links-rodape li, .redes-sociais li {
+  align-items: center;
+  margin: .5rem 0;
+  display: flex;
+}
+
+.links-rodape a {
+  color: #333;
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links-rodape a:hover, .redes-sociais a:hover {
+  color: #007bff;
+}
+
+.links-rodape img, .redes-sociais img {
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.redes-sociais {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.redes-sociais li {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  transition: transform .3s ease-in-out;
+  display: flex;
+}
+
+.redes-sociais a {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.redes-sociais img {
+  width: 24px;
+  height: 24px;
+}
+
+.redes-sociais li:first-child {
+  background-color: #00f;
+}
+
+.redes-sociais li:nth-child(2) {
+  background-color: purple;
+}
+
+.redes-sociais li:nth-child(3) {
+  background-color: green;
+}
+
+.redes-sociais li:nth-child(4) {
+  background-color: red;
+}
+
+.redes-sociais li:hover {
+  transform: scale(1.1);
+}
+
+
+/*# sourceMappingURL=src_app_724922b2._.css.map*/

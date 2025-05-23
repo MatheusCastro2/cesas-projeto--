@@ -1,10 +1,11 @@
+'use client'
+
 import Link from 'next/link';
 import './styles.css';
 import { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi'
-import Logo from '../../../public/assets/Logo_Cesas.jpeg'
 import DropdownCoursesMenu from './DropdownCoursesMenu';
-import DropdownRegisterMenu from './DropdownCoursesMenu';
+import DropdownRegisterMenu from './DropdownRegisterMenu';
 
 export default function Cabecalho() {
     const [coursesDropdownOpen,setCoursesDropdownOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Cabecalho() {
     return (
         <header className='cabecalho'>
             <Link href="/" onClick={() => setCoursesDropdownOpen(false)}>
-                <img src={Logo.src} alt="Logo CESAS" style={{ width: '200px' }} />
+                <img src={'/assets/Logo_Cesas2.jpeg'} alt="Logo CESAS" style={{ width: '200px' }} />
             </Link>
             <nav>
                 <ul className='lista-cabecalho'>

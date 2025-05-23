@@ -1,9 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/cadastro/page": "app/cadastro/page.js",
-  "/cursos/page": "app/cursos/page.js",
+  "/cursos/eja/page": "app/cursos/eja/page.js",
+  "/cursos/profissionalizante/page": "app/cursos/profissionalizante/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/login/page": "app/login/page.js",
-  "/page": "app/page.js",
-  "/perguntas_respostas/page": "app/perguntas_respostas/page.js"
+  "/page": "app/page.js"
 }

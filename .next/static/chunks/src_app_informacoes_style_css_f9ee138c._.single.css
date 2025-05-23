@@ -1,25 +1,27 @@
 /* [project]/src/app/informacoes/style.css [app-client] (css) */
 .card-informacoes {
-  background-color: #0000;
+  background-color: #fff;
   border-radius: 20px;
-  justify-content: center;
-  align-items: stretch;
-  gap: 0;
+  flex-direction: column;
   max-width: 1100px;
   margin: 4rem auto;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 4px 12px #0000000d;
 }
 
-.card-informacoes img {
+.card-topo {
+  align-items: stretch;
+  display: flex;
+}
+
+.card-topo img {
   object-fit: cover;
   width: 50%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
-.card-informacoes p {
+.card-topo p {
   color: #fff;
   background-color: #5a9bfc;
   border-radius: 20px;
@@ -30,6 +32,14 @@
   font-size: 1rem;
   line-height: 1.6;
   display: flex;
+}
+
+.card-video {
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=src_app_informacoes_style_css_f9ee138c._.single.css.map*/
