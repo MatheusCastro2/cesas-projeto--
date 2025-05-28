@@ -80,7 +80,7 @@ export default function RegisterProfissionalizante(): ReactElement {
                 formData.append(key, value as string);
             }
 
-            const response = await fetch('http://localhost:3001/api/students', {
+            const response = await fetch('http://localhost:3000/api/students', {
                 method: 'POST',
                 body: formData,
             });

@@ -148,9 +148,12 @@ export default function RegisterEJA(): ReactElement {
             if (studentData.studentAcademicRecord) formData.append('studentAcademicRecord', studentData.studentAcademicRecord);
             if (studentData.studentMedicalReport) formData.append('studentMedicalReport', studentData.studentMedicalReport);
 
-            const response = await fetch('http://localhost:3001/api/students', {
+            const response = await fetch('http://localhost:3000/students', {
                 method: 'POST',
-                body: formData,
+                headers: {
+                  'content-type': 'application/json'  
+                },
+                 body: JSON.stringify(studentData),
             });
 
             if (!response.ok) throw new Error('Erro ao enviar dados');

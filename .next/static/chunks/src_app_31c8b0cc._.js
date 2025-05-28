@@ -1565,7 +1565,7 @@ function Step6({ studentData, handleInputChange, setStudentData, nextPage, prevP
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             type: "radio",
-                                            name: "recorlessStudent",
+                                            name: "recordlessStudent",
                                             value: "true",
                                             checked: studentData.disabledStudent === true,
                                             onChange: (e)=>setStudentData({
@@ -2071,7 +2071,7 @@ function Cabecalho() {
                 href: "/",
                 onClick: ()=>setCoursesDropdownOpen(false),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                    src: '/assets/Logo_Cesas.jpeg',
+                    src: '/assets/Logo_Cesas2.jpeg',
                     alt: "Logo CESAS",
                     style: {
                         width: '200px'
@@ -2620,9 +2620,12 @@ function RegisterEJA() {
             if (studentData.studentProofOfResidence) formData.append('studentProofOfResidence', studentData.studentProofOfResidence);
             if (studentData.studentAcademicRecord) formData.append('studentAcademicRecord', studentData.studentAcademicRecord);
             if (studentData.studentMedicalReport) formData.append('studentMedicalReport', studentData.studentMedicalReport);
-            const response = await fetch('http://localhost:3001/api/students', {
+            const response = await fetch('http://localhost:3000/students', {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(studentData)
             });
             if (!response.ok) throw new Error('Erro ao enviar dados');
             alert('Dados enviados com sucesso!');
@@ -2636,7 +2639,7 @@ function RegisterEJA() {
             " ",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/cadastro/eja/page.tsx",
-                lineNumber: 167,
+                lineNumber: 170,
                 columnNumber: 12
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -2646,17 +2649,17 @@ function RegisterEJA() {
                     children: renderStep()
                 }, void 0, false, {
                     fileName: "[project]/src/app/cadastro/eja/page.tsx",
-                    lineNumber: 169,
+                    lineNumber: 172,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/cadastro/eja/page.tsx",
-                lineNumber: 168,
+                lineNumber: 171,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$rodape$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/cadastro/eja/page.tsx",
-                lineNumber: 173,
+                lineNumber: 176,
                 columnNumber: 9
             }, this)
         ]

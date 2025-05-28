@@ -58,7 +58,7 @@ export default function Step6({ studentData, handleInputChange, setStudentData, 
                         <label>
                             <input
                                 type="radio"
-                                name="recorlessStudent"
+                                name="recordlessStudent"
                                 value="true"
                                 checked={studentData.disabledStudent === true}
                                 onChange={(e) => setStudentData({
