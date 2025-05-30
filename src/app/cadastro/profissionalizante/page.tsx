@@ -1,7 +1,10 @@
+'use client'
 import { FormEvent, ReactElement, useState } from 'react';
 import '../styles.css';
 import Step1 from './Step1';
 import Step2 from './Step2';
+import Cabecalho from '@/app/cabecalho';
+import Rodape from '@/app/rodape';
 
 
 export interface StudentData {
@@ -96,10 +99,13 @@ export default function RegisterProfissionalizante(): ReactElement {
 
 
     return (
+        <> <Cabecalho />
         <form onSubmit={handleSubmit}>
             <div className='register-container'>
                 {renderStep()}
             </div>
         </form>
+        <Rodape />
+        </>
     );
 }

@@ -18,10 +18,10 @@ export default function Step1({ nextPage }: Props) {
                     <p>Para a matrícula na 1ª Etapa ou 2ª Etapa do EJA, Você deve ter no minímo 15 anos completos</p>
                     <br></br>
                     <p>Para a matrícula na 3ª Etapa do EJA, Você deve ter no minímo 18 anos completos</p>
-                    <br></br>
-                    <p>Caso você garanta a vaga, a secretaria entrará em contato</p>
+                    {/* <br></br> */}
+                    {/* <p>A entrega dos documentos não é obrigatória agora, mas deve ser feita presencialmente no início das aulas</p> */}
                 </div>
-                <br></br>
+                {/* <br></br> */}
                 <div className="button-container">
                     <button type="button" className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
                 </div>

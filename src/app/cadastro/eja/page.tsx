@@ -11,6 +11,7 @@ import Step6 from './Step6';
 import Step7 from './Step7';
 import Cabecalho from '@/app/cabecalho';
 import Rodape from '@/app/rodape';
+import Step8 from './Step8';
 
 export interface StudentData {
     name: string,
@@ -87,19 +88,21 @@ export default function RegisterEJA(): ReactElement {
     const renderStep = () => {
         switch (step) {
             case 1:
-                return <Step1  nextPage={nextPage} />;
+                return <Step1 nextPage={nextPage} />;
             case 2:
-                return <Step2  studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step2 studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
             case 3:
-                return <Step3  studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step3 studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
             case 4:
-                return <Step4  studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step4 studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
             case 5:
-                return <Step5  studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step5 studentData={studentData} handleInputChange={handleInputChange} nextPage={nextPage} prevPage={prevPage} />;
             case 6:
-                return <Step6  studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
+                return <Step6 studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
             case 7:
-                return <Step7  handleInputChange={handleInputChange} prevPage={prevPage} />;
+                return <Step7 handleInputChange={handleInputChange} prevPage={prevPage}/>;
+            case 8:
+                return <Step8/>;
             default:
                 return null;
         }
@@ -138,22 +141,16 @@ export default function RegisterEJA(): ReactElement {
             const formData = new FormData();
 
             for (const [key, value] of Object.entries(studentData)) {
-                if (value instanceof File || value === null) continue;
-                formData.append(key, value as string);
+                if (value instanceof File && value) {
+                    formData.append(key, value);
+                } else if (value !== null && value !== undefined) {
+                    formData.append(key, String(value));
+                }
             }
-
-            if (studentData.studentPhoto) formData.append('studentPhoto', studentData.studentPhoto);
-            if (studentData.studentId) formData.append('studentId', studentData.studentId);
-            if (studentData.studentProofOfResidence) formData.append('studentProofOfResidence', studentData.studentProofOfResidence);
-            if (studentData.studentAcademicRecord) formData.append('studentAcademicRecord', studentData.studentAcademicRecord);
-            if (studentData.studentMedicalReport) formData.append('studentMedicalReport', studentData.studentMedicalReport);
 
             const response = await fetch('http://localhost:3000/students', {
                 method: 'POST',
-                headers: {
-                  'content-type': 'application/json'  
-                },
-                 body: JSON.stringify(studentData),
+                body: formData,
             });
 
             if (!response.ok) throw new Error('Erro ao enviar dados');
@@ -163,17 +160,19 @@ export default function RegisterEJA(): ReactElement {
             console.error(err);
             alert('Erro ao enviar formulário.');
         }
+
+        nextPage();
     }
 
 
     return (
-        <> <Cabecalho/>
-        <form onSubmit={handleSubmit}>
-            <div className='register-container'>
-                {renderStep()}
-            </div>
-        </form>
-        <Rodape/>
+        <> <Cabecalho />
+            <form encType="multipart/form-data" onSubmit={handleSubmit}>
+                <div className='register-container'>
+                    {renderStep()}
+                </div>
+            </form>
+            <Rodape />
         </>
     );
 }
