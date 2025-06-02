@@ -12,10 +12,16 @@
   display: flex;
 }
 
-.calendario-equipe button {
+.calendario-equipe img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: .5rem;
+}
+
+.equipe-sobrenos-link {
   color: #fff;
   cursor: pointer;
-  background-color: #5a9bfc;
+  background-color: #3b82f6;
   border: none;
   border-radius: 12px;
   flex-direction: column;
@@ -26,18 +32,13 @@
   padding: 1.5rem 2rem;
   font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
   transition: background-color .3s;
   display: flex;
 }
 
-.calendario-equipe button:hover {
-  background-color: #3b82f6;
-}
-
-.calendario-equipe img {
-  width: 24px;
-  height: 24px;
-  margin-bottom: .5rem;
+.equipe-sobrenos-link:hover {
+  background-color: var(--azul-escuro);
 }
 
 /*# sourceMappingURL=src_app_calendario_equipe_styles_css_f9ee138c._.single.css.map*/

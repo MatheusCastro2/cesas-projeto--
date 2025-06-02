@@ -1,0 +1,321 @@
+/* [project]/src/app/cabecalho/styles.css [app-client] (css) */
+.cabecalho {
+  background: #5a9bfc;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: .5rem 2rem;
+  display: flex;
+}
+
+.logo {
+  height: 40px;
+}
+
+.lista-cabecalho {
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  list-style: none;
+  display: flex;
+}
+
+.lista-cabecalho li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.lista-cabecalho li a:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.lista-cabecalho li a:hover:after {
+  width: 100%;
+}
+
+.botao-acessar {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-acessar:hover {
+  background-color: #2563eb;
+}
+
+.botao-registrar {
+  color: #3b82f6;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #3b82f6;
+  border-radius: 9999px;
+  align-items: center;
+  gap: .3rem;
+  padding: .4rem 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color .2s, color .2s;
+  display: flex;
+}
+
+.botao-registrar:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+.botao-faq {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-faq:hover {
+  background-color: #2563eb;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  color: #fff;
+  background: #5a9bfc;
+  border: none;
+  align-items: center;
+  gap: .3rem;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background-color .2s, color .2s;
+  display: flex;
+}
+
+.dropdown-toggle:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+.dropdown-menu {
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: .5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  margin: .3rem 0;
+}
+
+.dropdown-menu li a {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown-menu li a:after {
+  content: "";
+  background: #5a9bfc;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.dropdown-menu li a:hover:after {
+  width: 100%;
+}
+
+.dropdown-container .dropdown-toggle {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown-container .dropdown-toggle:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.dropdown-container .dropdown-toggle:hover:after {
+  width: 100%;
+}
+
+
+/* [project]/src/app/rodape/styles.css [app-client] (css) */
+footer {
+  text-align: left;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+footer h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-container {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+
+.links-rodape, .redes-sociais {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links-rodape li, .redes-sociais li {
+  align-items: center;
+  margin: .5rem 0;
+  display: flex;
+}
+
+.links-rodape a {
+  color: #333;
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links-rodape a:hover, .redes-sociais a:hover {
+  color: #007bff;
+}
+
+.links-rodape img, .redes-sociais img {
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.redes-sociais {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.redes-sociais li {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  transition: transform .3s ease-in-out;
+  display: flex;
+}
+
+.redes-sociais a {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.redes-sociais img {
+  width: 24px;
+  height: 24px;
+}
+
+.redes-sociais li:first-child {
+  background-color: #00f;
+}
+
+.redes-sociais li:nth-child(2) {
+  background-color: purple;
+}
+
+.redes-sociais li:nth-child(3) {
+  background-color: green;
+}
+
+.redes-sociais li:nth-child(4) {
+  background-color: red;
+}
+
+.redes-sociais li:hover {
+  transform: scale(1.1);
+}
+
+
+/* [project]/src/app/sobre_nos/styles.css [app-client] (css) */
+h1 {
+  color: #2b4d8c;
+  justify-content: center;
+  display: flex;
+}
+
+.sobre-nos {
+  text-align: justify;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+}
+
+.texto {
+  flex: 1;
+}
+
+.sobre-nos img {
+  width: 600px;
+  height: 400px;
+}
+
+
+/*# sourceMappingURL=src_app_f51379d3._.css.map*/

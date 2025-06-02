@@ -1,0 +1,27 @@
+/* [project]/src/app/sobre_nos/styles.css [app-client] (css) */
+h1 {
+  color: #2b4d8c;
+  justify-content: center;
+  display: flex;
+}
+
+.sobre-nos {
+  text-align: justify;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+}
+
+.texto {
+  flex: 1;
+}
+
+.sobre-nos img {
+  width: 600px;
+  height: 400px;
+}
+
+/*# sourceMappingURL=src_app_sobre_nos_styles_css_f9ee138c._.single.css.map*/

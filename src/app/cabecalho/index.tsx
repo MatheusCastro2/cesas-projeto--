@@ -6,10 +6,12 @@ import { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi'
 import DropdownCoursesMenu from './DropdownCoursesMenu';
 import DropdownRegisterMenu from './DropdownRegisterMenu';
+import DropdownFaqMenu from './DropdownFaqMenu';
 
 export default function Cabecalho() {
-    const [coursesDropdownOpen,setCoursesDropdownOpen] = useState(false);
-    const [registerDropdownOpen,setRegisterDropdownOpen] = useState(false);
+    const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false);
+    const [registerDropdownOpen, setRegisterDropdownOpen] = useState(false);
+    const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
     return (
         <header className='cabecalho'>
             <Link href="/" onClick={() => setCoursesDropdownOpen(false)}>
@@ -19,25 +21,37 @@ export default function Cabecalho() {
                 <ul className='lista-cabecalho'>
 
                     <li>
-                        <Link href="/login" onClick={() => setCoursesDropdownOpen(false)}>Área do Aluno</Link>
+                        <a href="http://localhost:3000/admin/login">
+                            Área Administrativa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://moodle.com/pt-br/">
+                            Área do Aluno
+                        </a>
                     </li>
                     <li className='dropdown-container'>
                         <button className="dropdown-toggle" onClick={() => setCoursesDropdownOpen(!coursesDropdownOpen)}>Cursos
                             <FiChevronDown />
                         </button>
                         {coursesDropdownOpen && (
-                            <DropdownCoursesMenu onClose={() => setCoursesDropdownOpen(false)}/>
+                            <DropdownCoursesMenu onClose={() => setCoursesDropdownOpen(false)} />
                         )}
                     </li>
-                    <li>
-                        <Link href="/perguntas_respostas" onClick={() => setCoursesDropdownOpen(false)} > Perguntas e Respostas </Link>
+                    <li className='dropdown-container'>
+                        <button className="dropdown-toggle" onClick={() => setFaqDropdownOpen(!faqDropdownOpen)}>Perguntas e Respostas
+                            <FiChevronDown />
+                        </button>
+                        {faqDropdownOpen && (
+                            <DropdownFaqMenu onClose={() => setFaqDropdownOpen(false)} />
+                        )}
                     </li>
                     <li className='dropdown-container'>
                         <button className="botao-registrar" onClick={() => setRegisterDropdownOpen(!registerDropdownOpen)}>Matricular-se
                             <FiChevronDown />
                         </button>
                         {registerDropdownOpen && (
-                            <DropdownRegisterMenu onClose={() => setRegisterDropdownOpen(false)}/>
+                            <DropdownRegisterMenu onClose={() => setRegisterDropdownOpen(false)} />
                         )}
                     </li>
                 </ul>

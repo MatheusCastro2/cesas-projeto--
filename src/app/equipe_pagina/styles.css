@@ -1,14 +1,17 @@
 /* Classe principal para a página de equipe */
 .equipe-pagina {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Fundo cinza claro */
-    color: #333; /* Cor do texto */
+    background-color: #ffffff;
+    /* Fundo cinza claro */
+    color: #333;
+    /* Cor do texto */
     padding: 20px;
 }
 
 /* Estilo para o artigo principal */
 .equipe-pagina article {
-    background-color: #ffffff; /* Fundo branco */
+    background-color: #ffffff;
+    /* Fundo branco */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,7 +25,8 @@
 /* Estilo para os títulos de seções (h2) dentro da página de equipe */
 .equipe-pagina h2 {
     font-size: 24px;
-    color: #003366; /* Azul escuro */
+    color: #003366;
+    /* Azul escuro */
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -36,29 +40,71 @@
 /* Estilo para os itens de lista (li) dentro da página de equipe */
 .equipe-pagina li {
     font-size: 18px;
-    color: #666; /* Cor de texto mais clara para os itens */
+    color: #666;
+    /* Cor de texto mais clara para os itens */
     margin-bottom: 8px;
+    display: flex;
+}
+
+.equipe-pagina .coordenadores section {
+    color: #0066cc;
+    /* Azul claro */
+    font-size: 22px;
+}
+
+.principais li{
+    display: flex;
+    justify-content: center;
+}
+
+.principais h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.coordenadores li{
+    display: flex;
+    justify-content: center;
+}
+
+.coordenadores h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.equipe-docente li{
+    display: flex;
+    justify-content: center;
+}
+
+.equipe-docente h2 {
+    display: flex;
+    justify-content: center;
 }
 
 /* Estilo para o título dos coordenadores */
 .equipe-pagina .coordenadores h2 {
-    color: #0066cc; /* Azul claro */
+    color: #0066cc;
+    /* Azul claro */
     font-size: 22px;
 }
 
 /* Estilo para o título da equipe docente */
 .equipe-pagina .equipe-docente h2 {
-    color: #003366; /* Azul escuro */
+    color: #003366;
+    /* Azul escuro */
 }
 
 /* Estilo para as listas de coordenadores e equipe docente */
-.equipe-pagina .coordenadores ul, .equipe-pagina .equipe-docente ul {
+.equipe-pagina .coordenadores ul,
+.equipe-pagina .equipe-docente ul {
     padding-left: 20px;
     margin-top: 10px;
 }
 
 /* Estilo para os itens de lista de coordenadores e equipe docente */
-.equipe-pagina .coordenadores li, .equipe-pagina .equipe-docente li {
+.equipe-pagina .coordenadores li,
+.equipe-pagina .equipe-docente li {
     font-size: 18px;
     color: #333;
     margin-bottom: 6px;
@@ -66,7 +112,8 @@
 
 /* Estilo para o título de principais */
 .equipe-pagina .principais h2 {
-    color: #003366; /* Azul escuro */
+    color: #003366;
+    /* Azul escuro */
     font-size: 22px;
 }
 

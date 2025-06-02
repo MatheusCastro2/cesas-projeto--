@@ -79,6 +79,21 @@
   background-color: #3b82f6;
 }
 
+.botao-faq {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-faq:hover {
+  background-color: #2563eb;
+}
+
 .dropdown-container {
   position: relative;
 }

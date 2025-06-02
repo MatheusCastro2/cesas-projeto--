@@ -161,7 +161,7 @@ export default function RegisterEJA(): ReactElement {
             alert('Erro ao enviar formulário.');
         }
 
-        nextPage();
+        // nextPage();
     }
 
 

@@ -11,8 +11,8 @@
     display: flex;
   }
   
-  .calendario-equipe button {
-    background-color: #5a9bfc;
+  /* .calendario-equipe button {
+    background-color: red;
     color: white;
     border: none;
     border-radius: 12px;
@@ -27,15 +27,39 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+  } */
   
-  .calendario-equipe button:hover {
+  /* .calendario-equipe button:hover {
     background-color: #3b82f6;
-  }
+  } */
   
   .calendario-equipe img {
     width: 24px;
     height: 24px;
     margin-bottom: 0.5rem;
   }
+
+  .equipe-sobrenos-link {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    width: 400px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+  
+.equipe-sobrenos-link:hover {
+    background-color: var(--azul-escuro);
+}
+
   

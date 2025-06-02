@@ -19,26 +19,8 @@
   font-size: 2rem;
 }
 
-.barra-pesquisa {
-  border: 2px solid #e0e0e0;
-  border-radius: 30px;
-  outline: none;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  padding: 12px 24px;
-  font-size: 16px;
-  transition: all .3s;
-  display: block;
-  box-shadow: 0 2px 10px #00000014;
-}
-
-.barra-pesquisa:focus {
-  border-color: #3498db;
-  box-shadow: 0 2px 15px #3498db33;
-}
-
 .lista-cursos {
+  text-align: justify;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
   max-width: 1200px;
@@ -67,10 +49,6 @@
   display: block;
 }
 
-.lista-cursos .curso-info {
-  padding: 15px;
-}
-
 .lista-cursos h2 {
   color: #2c3e50;
   margin: 0 0 10px;
@@ -78,9 +56,14 @@
 }
 
 .lista-cursos p {
-  color: #7f8c8d;
-  margin: 0 0 15px;
-  font-size: .9rem;
+  text-align: justify;
+}
+
+.lista-cursos .curso-info {
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+  display: flex;
 }
 
 .botao-inscrever {
@@ -89,6 +72,7 @@
   background-color: #3498db;
   border: none;
   border-radius: 4px;
+  margin-top: auto;
   padding: 8px 16px;
   font-size: .9rem;
   transition: background-color .3s;
@@ -184,6 +168,21 @@
 .botao-registrar:hover {
   color: #fff;
   background-color: #3b82f6;
+}
+
+.botao-faq {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  padding: .4rem 1rem;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+
+.botao-faq:hover {
+  background-color: #2563eb;
 }
 
 .dropdown-container {

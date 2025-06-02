@@ -1,11 +1,11 @@
 'use client'
 import { useState } from "react";
 
-import "./styles.css";
-import Cabecalho from "../cabecalho";
-import Rodape from "../rodape";
+import "../styles.css";
+import Cabecalho from "../../cabecalho";
+import Rodape from "../../rodape";
 
-export default function PerguntasRespostas() {
+export default function PerguntasRespostasEja() {
   const [abertos, setAbertos] = useState([false, false, false, false, false]);
 
   const alternacard = (index: number) => {
@@ -16,7 +16,7 @@ export default function PerguntasRespostas() {
 
   const dados = [
     { 
-      pergunta: "O curso é gratuito?", 
+      pergunta: "O EJA é gratuito?", 
       resposta: "O CESAS é uma escola pública da Secretaria de Estado de Educação do Distrito Federal. Portanto, todos os cursos oferecidos aqui são gratuitos." 
     },
     { 

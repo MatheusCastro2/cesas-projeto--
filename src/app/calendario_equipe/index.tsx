@@ -7,19 +7,15 @@ export default function CalendarioEquipe() {
             <div>
                 <ul className='calendario-equipe'>
                     <li>
-                        <button>
-                            <img src='/assets/icon_agenda.svg' alt="Calendario" />
-                            Calendario
-                            
-                        </button>
+                        <Link className='equipe-sobrenos-link' href={"./sobre_nos"}>
+                            <img src='/assets/icon_equipe.svg' alt="Equipe" />
+                                Sobre Nós
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/equipe_pagina">
-                        <button>
+                        <Link className='equipe-sobrenos-link' href={"./equipe_pagina"}>
                             <img src='/assets/icon_equipe.svg' alt="Equipe" />
                                 Equipe
-                        </button>
-
                         </Link>
                     </li>
                 </ul>
