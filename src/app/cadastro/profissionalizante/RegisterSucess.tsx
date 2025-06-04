@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Step8() {
+export default function RegisterSucess() {
     return (<div className="register-container">
         <div className="register-card">
             <div className="register-header">
-                <h1> Matrícula Online no EJA</h1>
+                <h1> Matrícula Online no Profissionalizante</h1>
                 <br></br>
                 <p>Parabéns! sua pedido de matrícula foi registrado com sucesso! </p>
                 <br></br>

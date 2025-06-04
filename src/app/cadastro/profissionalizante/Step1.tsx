@@ -24,7 +24,7 @@ export default function Step1({ nextPage }: Props) {
                     <button type="button" className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
                 </div>
                 <div className="register-footer">
-                     <a href="/perguntas_respostas" className="signup-link">Saiba Mais Sobre a Matrícula no Profissionalizante</a>
+                     <a href="../perguntas_respostas/profissionalizante" className="signup-link">Saiba Mais Sobre a Matrícula no Profissionalizante</a>
                 </div>
             </div>
         </div>

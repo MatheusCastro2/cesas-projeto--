@@ -4,11 +4,11 @@ import { StudentData } from './page';
 interface Props {
     studentData: StudentData;
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void;
-    // setStudentData: React.Dispatch<React.SetStateAction<StudentData>>;
+    nextPage: () => void;
     prevPage: () => void;
 }
 
-export default function Step2({ studentData, handleInputChange,  prevPage }: Props) {
+export default function Step2({ studentData, handleInputChange,nextPage,prevPage }: Props) {
     return (
         <div className="register-container">
             <div className="register-card">
@@ -65,52 +65,32 @@ export default function Step2({ studentData, handleInputChange,  prevPage }: Pro
                         onChange={handleInputChange}
                         required />
                 </div>
-
                 <br></br>
-
                 <div className="form-group">
-                    <label htmlFor="text">Nome Completo da Mãe ou Responsável</label>
+                    <label htmlFor="text">Filiação 1</label>
                     <input
                         type="text"
                         id="mothersName"
                         name="mothersName"
                         value={studentData.mothersName}
                         onChange={handleInputChange}
-                        placeholder="Nome completo"
+                        placeholder="Nome completo da Mãe"
                         required />
                     <br></br>
                 </div>
+    
 
-                <div className='form-group dropdown'>
-                    <label htmlFor='applyCourse'>Curso desejado: </label>
-                    <select
-                        id="applyCourse"
-                        name="applyCourse"
-                        value={studentData.applyCourse}
+                <div className="form-group">
+                    <label htmlFor="text">Filiação 2</label>
+                    <input
+                        type="text"
+                        id="fathersName"
+                        name="fathersName"
+                        value={studentData.fathersName}
                         onChange={handleInputChange}
-                        required
-                    >
-                        <option value="" disabled>Selecione o curso desejado</option>
-                        <option value="cozinheiro">Cozinheiro</option>
-                        <option value="op-comp">Operador de Computador</option>
-                        <option value="assis-adm">Assistente Administrativo</option>
-                    </select>
-                </div>
-                <br></br>
-                <div className='form-group dropdown'>
-                    <label htmlFor='applyShift'>Turno desejado: </label>
-                    <select
-                        id="applyShift"
-                        name="applyShift"
-                        value={studentData.applyShift}
-                        onChange={handleInputChange}
-                        required
-                    >
-                        <option value="" disabled>Selecione o turno desejado</option>
-                        <option value="matutino">Matutino (07:50-12:00)</option>
-                        <option value="vespertino">Vespertino (15:50-18:00)</option>
-                        <option value="noturno">Noturno (19:00-23:00)</option>
-                    </select>
+                        placeholder="Nome completo do Pai"
+                        required />
+                    <br></br>
                 </div>
                 <br></br>
 
@@ -120,7 +100,7 @@ export default function Step2({ studentData, handleInputChange,  prevPage }: Pro
 
                 <div className="button-container">
                     <button type='button' className="pagination-button" onClick={() => prevPage()}>Voltar</button>
-                    <button type='submit' className="submit-button">Registrar</button>
+                    <button type='button' className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
                 </div>
             </div>
         </div>

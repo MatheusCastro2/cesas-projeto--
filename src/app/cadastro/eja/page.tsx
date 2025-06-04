@@ -11,7 +11,8 @@ import Step6 from './Step6';
 import Step7 from './Step7';
 import Cabecalho from '@/app/cabecalho';
 import Rodape from '@/app/rodape';
-import Step8 from './Step8';
+import RegisterFailed from './RegisterFailed';
+import RegisterSucess from './RegisterSucess';
 
 export interface StudentData {
     name: string,
@@ -102,7 +103,9 @@ export default function RegisterEJA(): ReactElement {
             case 7:
                 return <Step7 handleInputChange={handleInputChange} prevPage={prevPage}/>;
             case 8:
-                return <Step8/>;
+                return <RegisterSucess/>;
+            case 9:
+                return <RegisterFailed/>;
             default:
                 return null;
         }
@@ -148,20 +151,19 @@ export default function RegisterEJA(): ReactElement {
                 }
             }
 
-            const response = await fetch('http://localhost:3000/students', {
+            const response = await fetch('http://localhost:3000/eja/students', {
                 method: 'POST',
                 body: formData,
             });
 
             if (!response.ok) throw new Error('Erro ao enviar dados');
 
-            alert('Dados enviados com sucesso!');
+            nextPage();
         } catch (err) {
             console.error(err);
-            alert('Erro ao enviar formulário.');
+            nextPage();
+            nextPage();
         }
-
-        // nextPage();
     }
 
 
