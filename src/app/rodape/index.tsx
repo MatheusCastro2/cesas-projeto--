@@ -1,7 +1,33 @@
+'use client'
 
+import { useEffect, useState } from 'react';
 import './styles.css';
 
 export default function Rodape() {
+  const [footerData, setFooterData] = useState({
+    siteLink: '',
+    youtubeLink: '',
+    instagramLink: '',
+    facebookLink: '',
+    whatsappLink: '',
+    phone: '',
+    email: ''
+  });
+  useEffect(() => {
+    async function fetchFormTitle() {
+      try {
+        const response = await fetch('http://localhost:3000/getFooterData');  // método GET
+        const data = await response.json();
+
+        setFooterData(data);
+      } catch (error) {
+        console.error("Erro ao buscar título do formulário:", error);
+      }
+    }
+
+    fetchFormTitle();
+  }, []);
+
   return (
     <footer>
       <div className="footer-container">
@@ -9,38 +35,42 @@ export default function Rodape() {
           <h2>Centro de Educação de Jovens e Adultos Asa Sul-Cesas</h2>
           <li>
             <img src={'/assets/icon_site.svg'} alt="Site oficial do CESAS" />
-            <a href="https://www.cesas.se.df.gov.br/ead/" target="_blank" rel="noopener noreferrer">
+            <a href={footerData.siteLink} target="_blank" rel="noopener noreferrer">
               Site
             </a>
           </li>
           <li>
             <img src={'/assets/icon_telefone.svg'} alt="Telefone de contato" />
-            <a href="tel:+5561991184868">+55 (61) 99118-4868</a>
+            <a href={'tel:' + footerData.phone} target="_blank" rel="noopener noreferrer">
+              {footerData.phone}
+            </a>
           </li>
           <li>
             <img src='/assets/icon_email.svg' alt="E-mail de contato" />
-            <a href="mailto:presencacesas@gmail.com">presencacesas@gmail.com</a>
+            <a href={'mailto:' + footerData.email} target="_blank" rel="noopener noreferrer">
+              {footerData.email}
+            </a>
           </li>
         </ul>
         <ul className="redes-sociais">
 
           <li>
-            <a href="https://www.facebook.com/cesas.planopiloto" target="_blank" rel="noopener noreferrer">
+            <a href={footerData.facebookLink} target="_blank" rel="noopener noreferrer">
               <img src={'/assets/icon_facebook.svg'} alt="Facebook oficial do CESAS" />
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/c.e.s.a.s/" target="_blank" rel="noopener noreferrer">
+            <a href={footerData.instagramLink} target="_blank" rel="noopener noreferrer">
               <img src={'/assets/icon_instagram.svg'} alt="Instagram oficial do CESAS" />
             </a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send?phone=+5561991184868" target="_blank" rel="noopener noreferrer">
+            <a href={footerData.whatsappLink} target="_blank" rel="noopener noreferrer">
               <img src={'/assets/icon_whats.svg'} alt="WhatsApp do CESAS" />
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/@CREPlanoPiloto-tw8wj" target="_blank" rel="noopener noreferrer">
+            <a href={footerData.youtubeLink} target="_blank" rel="noopener noreferrer">
               <img src={'/assets/icon_youtube.svg'} alt="Canal do CESAS no YouTube" />
             </a>
           </li>

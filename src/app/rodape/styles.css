@@ -45,6 +45,15 @@ footer h2 {
   font-size: 1rem;
 }
 
+.links-rodape p
+ {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
 .links-rodape a:hover,
 .redes-sociais a:hover {
   color: #007bff;
