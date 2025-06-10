@@ -299,12 +299,16 @@ function Cabecalho() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: "dropdown-toggle",
-                                    onClick: ()=>setCoursesDropdownOpen(!coursesDropdownOpen),
+                                    onClick: ()=>{
+                                        setCoursesDropdownOpen(!coursesDropdownOpen);
+                                        setFaqDropdownOpen(false);
+                                        setRegisterDropdownOpen(false);
+                                    },
                                     children: [
                                         "Cursos",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 35,
+                                            lineNumber: 38,
                                             columnNumber: 29
                                         }, this)
                                     ]
@@ -317,7 +321,7 @@ function Cabecalho() {
                                     onClose: ()=>setCoursesDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 41,
                                     columnNumber: 29
                                 }, this)
                             ]
@@ -331,31 +335,35 @@ function Cabecalho() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: "dropdown-toggle",
-                                    onClick: ()=>setFaqDropdownOpen(!faqDropdownOpen),
+                                    onClick: ()=>{
+                                        setFaqDropdownOpen(!faqDropdownOpen);
+                                        setCoursesDropdownOpen(false);
+                                        setRegisterDropdownOpen(false);
+                                    },
                                     children: [
                                         "Perguntas e Respostas",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 43,
+                                            lineNumber: 49,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 45,
                                     columnNumber: 25
                                 }, this),
                                 faqDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownFaqMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setFaqDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 52,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 41,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -363,31 +371,35 @@ function Cabecalho() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: "botao-registrar",
-                                    onClick: ()=>setRegisterDropdownOpen(!registerDropdownOpen),
+                                    onClick: ()=>{
+                                        setRegisterDropdownOpen(!registerDropdownOpen);
+                                        setCoursesDropdownOpen(false);
+                                        setFaqDropdownOpen(false);
+                                    },
                                     children: [
                                         "Matricular-se",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 51,
+                                            lineNumber: 60,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 56,
                                     columnNumber: 25
                                 }, this),
                                 registerDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownRegisterMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setRegisterDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 63,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 49,
+                            lineNumber: 55,
                             columnNumber: 21
                         }, this)
                     ]
@@ -418,9 +430,33 @@ __turbopack_context__.s({
     "default": (()=>Rodape)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+'use client';
+;
 ;
 ;
 function Rodape() {
+    const [footerData, setFooterData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
+        siteLink: '',
+        youtubeLink: '',
+        instagramLink: '',
+        facebookLink: '',
+        whatsappLink: '',
+        phone: '',
+        email: ''
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        async function fetchFormTitle() {
+            try {
+                const response = await fetch('http://localhost:3000/getFooterData'); // método GET
+                const data = await response.json();
+                setFooterData(data);
+            } catch (error) {
+                console.error("Erro ao buscar título do formulário:", error);
+            }
+        }
+        fetchFormTitle();
+    }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "footer-container",
@@ -432,7 +468,7 @@ function Rodape() {
                             children: "Centro de Educação de Jovens e Adultos Asa Sul-Cesas"
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 9,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -442,23 +478,23 @@ function Rodape() {
                                     alt: "Site oficial do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 11,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://www.cesas.se.df.gov.br/ead/",
+                                    href: footerData.siteLink,
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     children: "Site"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 12,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 10,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -468,21 +504,23 @@ function Rodape() {
                                     alt: "Telefone de contato"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 17,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "tel:+5561991184868",
-                                    children: "+55 (61) 99118-4868"
+                                    href: 'tel:' + footerData.phone,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    children: footerData.phone
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 18,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 16,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -492,27 +530,29 @@ function Rodape() {
                                     alt: "E-mail de contato"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 21,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "mailto:presencacesas@gmail.com",
-                                    children: "presencacesas@gmail.com"
+                                    href: 'mailto:' + footerData.email,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    children: footerData.email
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 22,
+                                    lineNumber: 50,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 20,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/rodape/index.tsx",
-                    lineNumber: 8,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -520,7 +560,7 @@ function Rodape() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://www.facebook.com/cesas.planopiloto",
+                                href: footerData.facebookLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -528,22 +568,22 @@ function Rodape() {
                                     alt: "Facebook oficial do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 29,
+                                    lineNumber: 59,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 28,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 27,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://www.instagram.com/c.e.s.a.s/",
+                                href: footerData.instagramLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -551,22 +591,22 @@ function Rodape() {
                                     alt: "Instagram oficial do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 64,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 33,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 32,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://api.whatsapp.com/send?phone=+5561991184868",
+                                href: footerData.whatsappLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -574,22 +614,22 @@ function Rodape() {
                                     alt: "WhatsApp do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 39,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 38,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 37,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://www.youtube.com/@CREPlanoPiloto-tw8wj",
+                                href: footerData.youtubeLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -597,34 +637,34 @@ function Rodape() {
                                     alt: "Canal do CESAS no YouTube"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 74,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 43,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 42,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/rodape/index.tsx",
-                    lineNumber: 25,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/rodape/index.tsx",
-            lineNumber: 7,
+            lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/rodape/index.tsx",
-        lineNumber: 6,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -650,33 +690,31 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$rodape$2f$inde
 ;
 ;
 function CursoEja() {
-    const [termoPesquisa, setTermoPesquisa] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [cursos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([
-        {
-            id: 1,
-            nome: '1a Etapa',
-            descricao: 'Na Primeira Etapa da EJA, oferecemos a base essencial da educação, com foco na alfabetização, letramento e desenvolvimento das competências fundamentais em leitura, escrita e matemática, proporcionando autonomia e inclusão social. ',
-            imagem: '/assets/etapa11.png'
-        },
-        {
-            id: 2,
-            nome: '2a Etapa',
-            descricao: 'A Segunda Etapa amplia os conhecimentos adquiridos, aprofundando conteúdos das disciplinas básicas e preparando os estudantes para o ingresso no Ensino Médio, com uma proposta pedagógica adaptada à realidade dos jovens e adultos. ',
-            imagem: '/assets/etapa22.jpg'
-        },
-        {
-            id: 3,
-            nome: '3a Etapa',
-            descricao: 'Na Terceira Etapa, os estudantes consolidam conhecimentos em diversas áreas, como Linguagens, Ciências da Natureza, Matemática e Ciências Humanas, habilitando-se para a continuidade dos estudos no ensino superior ou ingresso qualificado no mercado de trabalho.',
-            imagem: '/assets/etapa33.jpg'
+    const [cursos, setCursos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        async function fetchCursos() {
+            try {
+                const response = await fetch("http://localhost:3000/getEJACursos"); // rota certa aqui
+                const data = await response.json();
+                setCursos(data);
+            } catch (error) {
+                console.error("Erro ao buscar cursos:", error);
+            }
         }
-    ]);
+        fetchCursos();
+    }, []);
+    // const [termoPesquisa, setTermoPesquisa] = useState('');
+    // const [cursos] = useState([
+    //     { id: 1, nome: '1ª Etapa', descricao: 'Na Primeira Etapa da EJA, oferecemos a base essencial da educação, com foco na alfabetização, letramento e desenvolvimento das competências fundamentais em leitura, escrita e matemática, proporcionando autonomia e inclusão social. ', imagem: '/assets/etapa11.png' },
+    //     { id: 2, nome: '2ª Etapa', descricao: 'A Segunda Etapa amplia os conhecimentos adquiridos, aprofundando conteúdos das disciplinas básicas e preparando os estudantes para o ingresso no Ensino Médio, com uma proposta pedagógica adaptada à realidade dos jovens e adultos. ', imagem: '/assets/etapa22.jpg' },
+    //     { id: 3, nome: '3ª Etapa', descricao: 'Na Terceira Etapa, os estudantes consolidam conhecimentos em diversas áreas, como Linguagens, Ciências da Natureza, Matemática e Ciências Humanas, habilitando-se para a continuidade dos estudos no ensino superior ou ingresso qualificado no mercado de trabalho.', imagem: '/assets/etapa33.jpg' },
+    // ])
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             " ",
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/cursos/eja/page.tsx",
-                lineNumber: 18,
+                lineNumber: 43,
                 columnNumber: 12
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -684,103 +722,7 @@ function CursoEja() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/app/cursos/eja/page.tsx",
-                        lineNumber: 24,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                        fileName: "[project]/src/app/cursos/eja/page.tsx",
-                        lineNumber: 25,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "texto-de-cursos",
-                        children: "Cursos Disponiveis"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/cursos/eja/page.tsx",
-                        lineNumber: 26,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                        fileName: "[project]/src/app/cursos/eja/page.tsx",
-                        lineNumber: 27,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                        fileName: "[project]/src/app/cursos/eja/page.tsx",
-                        lineNumber: 28,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "lista-cursos",
-                        children: cursos.map((curso)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "curso-card",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: curso.imagem,
-                                            alt: curso.nome
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                            lineNumber: 33,
-                                            columnNumber: 33
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "curso-info",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                    children: curso.nome
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                                    lineNumber: 35,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    children: curso.descricao
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                                    lineNumber: 36,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                                    lineNumber: 37,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                    href: "/cadastro/eja",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        className: "botao-inscrever",
-                                                        children: "Inscreva-se"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                                        lineNumber: 39,
-                                                        columnNumber: 41
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                                    lineNumber: 38,
-                                                    columnNumber: 37
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                            lineNumber: 34,
-                                            columnNumber: 33
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                    lineNumber: 32,
-                                    columnNumber: 29
-                                }, this)
-                            }, curso.id, false, {
-                                fileName: "[project]/src/app/cursos/eja/page.tsx",
-                                lineNumber: 31,
-                                columnNumber: 25
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/cursos/eja/page.tsx",
-                        lineNumber: 29,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -788,7 +730,10 @@ function CursoEja() {
                         lineNumber: 46,
                         columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        className: "texto-de-cursos",
+                        children: "Cursos Disponiveis"
+                    }, void 0, false, {
                         fileName: "[project]/src/app/cursos/eja/page.tsx",
                         lineNumber: 47,
                         columnNumber: 17
@@ -802,16 +747,109 @@ function CursoEja() {
                         fileName: "[project]/src/app/cursos/eja/page.tsx",
                         lineNumber: 49,
                         columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "lista-cursos",
+                        children: cursos.map((curso)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "curso-card",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            src: `http://localhost:3000${curso.image}`,
+                                            alt: curso.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                            lineNumber: 54,
+                                            columnNumber: 33
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "curso-info",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                    children: curso.name
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                                    lineNumber: 56,
+                                                    columnNumber: 37
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: curso.description
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                                    lineNumber: 57,
+                                                    columnNumber: 37
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                                    lineNumber: 58,
+                                                    columnNumber: 37
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: "/cadastro/eja",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: "botao-inscrever",
+                                                        children: "Inscreva-se"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                                        lineNumber: 60,
+                                                        columnNumber: 41
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                                    lineNumber: 59,
+                                                    columnNumber: 37
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                            lineNumber: 55,
+                                            columnNumber: 33
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                    lineNumber: 53,
+                                    columnNumber: 29
+                                }, this)
+                            }, curso.id, false, {
+                                fileName: "[project]/src/app/cursos/eja/page.tsx",
+                                lineNumber: 52,
+                                columnNumber: 25
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/cursos/eja/page.tsx",
+                        lineNumber: 50,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                        fileName: "[project]/src/app/cursos/eja/page.tsx",
+                        lineNumber: 67,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                        fileName: "[project]/src/app/cursos/eja/page.tsx",
+                        lineNumber: 68,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                        fileName: "[project]/src/app/cursos/eja/page.tsx",
+                        lineNumber: 69,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                        fileName: "[project]/src/app/cursos/eja/page.tsx",
+                        lineNumber: 70,
+                        columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/cursos/eja/page.tsx",
-                lineNumber: 19,
+                lineNumber: 44,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$rodape$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/cursos/eja/page.tsx",
-                lineNumber: 51,
+                lineNumber: 72,
                 columnNumber: 13
             }, this)
         ]

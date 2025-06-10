@@ -31,7 +31,10 @@ export default function Cabecalho() {
                         </a>
                     </li>
                     <li className='dropdown-container'>
-                        <button className="dropdown-toggle" onClick={() => setCoursesDropdownOpen(!coursesDropdownOpen)}>Cursos
+                        <button className="dropdown-toggle" onClick={() => {setCoursesDropdownOpen(!coursesDropdownOpen)
+                            setFaqDropdownOpen(false);
+                            setRegisterDropdownOpen(false);
+                        }}>Cursos
                             <FiChevronDown />
                         </button>
                         {coursesDropdownOpen && (
@@ -39,7 +42,10 @@ export default function Cabecalho() {
                         )}
                     </li>
                     <li className='dropdown-container'>
-                        <button className="dropdown-toggle" onClick={() => setFaqDropdownOpen(!faqDropdownOpen)}>Perguntas e Respostas
+                        <button className="dropdown-toggle" onClick={() => {setFaqDropdownOpen(!faqDropdownOpen)
+                            setCoursesDropdownOpen(false);
+                            setRegisterDropdownOpen(false);
+                        }}>Perguntas e Respostas
                             <FiChevronDown />
                         </button>
                         {faqDropdownOpen && (
@@ -47,7 +53,10 @@ export default function Cabecalho() {
                         )}
                     </li>
                     <li className='dropdown-container'>
-                        <button className="botao-registrar" onClick={() => setRegisterDropdownOpen(!registerDropdownOpen)}>Matricular-se
+                        <button className="botao-registrar" onClick={() => {setRegisterDropdownOpen(!registerDropdownOpen)
+                            setCoursesDropdownOpen(false);
+                            setFaqDropdownOpen(false);
+                        }}>Matricular-se
                             <FiChevronDown />
                         </button>
                         {registerDropdownOpen && (

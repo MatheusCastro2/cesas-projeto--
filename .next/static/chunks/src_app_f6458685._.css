@@ -43,10 +43,10 @@
 }
 
 .lista-cursos img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
-  height: 180px;
-  display: block;
+  height: auto;
+  max-height: 16rem;
 }
 
 .lista-cursos h2 {
@@ -313,7 +313,7 @@ footer h2 {
   display: flex;
 }
 
-.links-rodape a {
+.links-rodape a, .links-rodape p {
   color: #333;
   margin-left: .5rem;
   font-size: 1rem;
