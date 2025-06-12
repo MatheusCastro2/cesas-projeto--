@@ -120,7 +120,7 @@ export default function RegisterProfissionalizante(): ReactElement {
                 }
             }
 
-            const response = await fetch('http://localhost:3000/professionalizing/students', {
+            const response = await fetch('http://srv762003.hstgr.cloud::3000/professionalizing/students', {
                 method: 'POST',
                 body: formData,
             });

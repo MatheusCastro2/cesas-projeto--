@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
     // const connection = await mysql.createConnection({
-    //   host: 'localhost',
+    //   host: 'srv762003.hstgr.cloud:3000',
     //   user: 'root',
     //   password: 'sua_senha',
     //   database: 'nome_banco',

@@ -21,7 +21,7 @@ export default function Cabecalho() {
                 <ul className='lista-cabecalho'>
 
                     <li>
-                        <a href="http://localhost:3000/admin/login">
+                        <a href="http://srv762003.hstgr.cloud::3000/admin/login">
                             Área Administrativa
                         </a>
                     </li>

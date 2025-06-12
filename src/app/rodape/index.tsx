@@ -16,7 +16,7 @@ export default function Rodape() {
   useEffect(() => {
     async function fetchFormTitle() {
       try {
-        const response = await fetch('http://localhost:3000/getFooterData');  // método GET
+        const response = await fetch('http://srv762003.hstgr.cloud::3000/getFooterData');  // método GET
         const data = await response.json();
 
         setFooterData(data);
