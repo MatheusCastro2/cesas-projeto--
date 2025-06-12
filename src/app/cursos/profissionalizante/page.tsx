@@ -56,6 +56,7 @@ export default function CursoProfissionalizante() {
                                 <img src={`http://localhost:3000${curso.image}`} alt={curso.name} />
                                 <div className="curso-info">
                                     <h2>{curso.name}</h2>
+                                    <br></br>
                                     <p>{curso.description}</p>
                                     <br></br>
                                     <p>Data de início: {curso.start_date}</p>

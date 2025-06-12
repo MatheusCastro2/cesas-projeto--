@@ -33,7 +33,9 @@
 .lista-cursos li {
   background-color: #fff;
   border-radius: 8px;
+  flex-direction: column;
   transition: transform .3s;
+  display: flex;
   overflow: hidden;
   box-shadow: 0 3px 10px #0000001a;
 }
@@ -43,10 +45,10 @@
 }
 
 .lista-cursos img {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
-  height: auto;
-  max-height: 16rem;
+  height: 180px;
+  display: block;
 }
 
 .lista-cursos h2 {

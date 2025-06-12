@@ -54,6 +54,7 @@ export default function CursoEja() {
                                 <img src={`http://localhost:3000${curso.image}`} alt={curso.name} />
                                 <div className="curso-info">
                                     <h2>{curso.name}</h2>
+                                    <br></br>
                                     <p>{curso.description}</p>
                                     <br></br>
                                     <Link href={"/cadastro/eja"}>
