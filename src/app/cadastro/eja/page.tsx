@@ -151,7 +151,7 @@ export default function RegisterEJA(): ReactElement {
                 }
             }
 
-            const response = await fetch('http://srv762003.hstgr.cloud::3000/eja/students', {
+            const response = await fetch('http://srv762003.hstgr.cloud:3000/eja/students', {
                 method: 'POST',
                 body: formData,
             });

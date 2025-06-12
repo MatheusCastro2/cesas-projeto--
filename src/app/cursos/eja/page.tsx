@@ -21,7 +21,7 @@ export default function CursoEja() {
         useEffect(() => {
             async function fetchCursos() {
                 try {
-                    const response = await fetch("http://srv762003.hstgr.cloud::3000/getEJACursos"); // rota certa aqui
+                    const response = await fetch("http://srv762003.hstgr.cloud:3000/getEJACursos"); // rota certa aqui
                     const data = await response.json();
                     setCursos(data);
                 } catch (error) {
@@ -51,7 +51,7 @@ export default function CursoEja() {
                     {cursos.map(curso => (
                         <li key={curso.id}>
                             <div className="curso-card">
-                                <img src={`http://srv762003.hstgr.cloud::3000${curso.image}`} alt={curso.name} />
+                                <img src={`http://srv762003.hstgr.cloud:3000${curso.image}`} alt={curso.name} />
                                 <div className="curso-info">
                                     <h2>{curso.name}</h2>
                                     <br></br>

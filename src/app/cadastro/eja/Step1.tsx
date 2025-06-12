@@ -17,7 +17,7 @@ export default function Step1({ nextPage }: Props) {
     useEffect(() => {
         async function fetchFormTitle() {
             try {
-                const response = await fetch('http://srv762003.hstgr.cloud::3000/ejaSubmitFormTitle');  // método GET
+                const response = await fetch('http://srv762003.hstgr.cloud:3000/ejaSubmitFormTitle');  // método GET
                 const data = await response.json();
 
                 if (data && data.name) {
