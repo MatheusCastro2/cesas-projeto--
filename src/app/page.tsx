@@ -7,9 +7,9 @@ import Video from "./video";
 
 export default function Home() {
   return (
-    <div className='container'>
+    
+    <div className='cesas-container'>
       <Cabecalho />
-
       <Informacoes />
       <Cards />
       <Video/>

@@ -1,49 +1,46 @@
 .lista-cards {
   display: flex;
-  flex-wrap: nowrap; /* Não quebra linha */
-  list-style: none; /* Remove os pontos da lista */
-  padding: 0;
-  margin: 0;
-  gap: 1rem; /* Espaçamento entre os cards */
-  justify-content: center; /* Centraliza horizontalmente */
-}
-
-.lista-cards li {
-  /* Remove o estilo de bloco e margens dos itens */
-  margin: 0;
-  padding: 0;
-}
-
-/* Adicione estilos para o contêiner dos cards */
-.cards {
-  display: flex;
-  justify-content: center; /* Centraliza os cards horizontalmente */
-  flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
-  gap: 1rem; /* Espaçamento entre os cards */
+  flex-direction: column; /* permite usar Bootstrap por dentro */
+  gap: 1rem;
   padding: 1rem;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Remove regras ultrapassadas de li */
+.lista-cards li {
+  margin: 0;
+  padding: 0;
+}
+
+/* card base do Bootstrap */
 .card {
-  background-color: white;
   border: 2px solid #5a9bfc;
   border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  
-  width: 200px; /* Define uma largura fixa para os cards */
-  height: auto; /* Ajusta a altura automaticamente */
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin: 0 auto; 
 }
 
-.card h2,
-.card p {
-  margin: 1rem;
-  color: #333;
-  font-size: 0.9rem;
+.card-custom {
+  width: 100%;
+  max-width: 320px;
+  min-height: 100px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* detalhes escondidos */
 .detalhes {
   max-height: 0;
   overflow: hidden;
@@ -52,23 +49,35 @@
   padding: 0 1rem;
 }
 
+/* ao abrir */
 .card.aberto .detalhes {
-  max-height: 200px; /* espaço suficiente para conteúdo */
+  max-height: 200px;
   opacity: 1;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
+/* Centralizar o título */
+.titulo-card {
+  text-align: center;
+  margin: 1rem auto 0.5rem auto;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Botão fixo na base do card */
 .botao-imagem {
   background-color: #5a9bfc;
   border: none;
-  padding: 0.75rem;
+  padding: 0.2rem 0; /* reduz altura do botão */
   width: 100%;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid #5a9bfc;
+  /* border-top: 2px solid #5a9bfc; */
   transition: background-color 0.2s ease;
+  /* border-radius: 0 0 12px 12px;  */
+  margin-top: auto;
 }
 
 .botao-imagem.hover-simulado {
@@ -76,11 +85,19 @@
 }
 
 .botao-imagem img {
-  width: 20px;
+  width: 18px;
   height: auto;
   transition: transform 0.3s ease;
 }
 
 .card.aberto .botao-imagem img {
-  transform: rotate(180deg); /* seta vira para cima */
+  transform: rotate(180deg);
+}
+
+/* responsividade */
+@media (max-width: 576px) {
+  .card-custom {
+    max-width: 60%;
+    margin: 0 auto; 
+  }
 }

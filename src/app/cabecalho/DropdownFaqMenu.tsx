@@ -6,7 +6,7 @@ interface Props {
 }
 export default function DropdownFaqMenu({onClose} : Props) {
 return(
-    <div className="dropdown-menu">
+    <div className="cesas-dropdown-menu">
         <ul>
             <li>
                 <Link href="/perguntas_respostas/eja" onClick={onClose}>EJA </Link>

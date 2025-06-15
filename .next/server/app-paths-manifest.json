@@ -1,9 +1,4 @@
 {
-  "/cadastro/eja/page": "app/cadastro/eja/page.js",
-  "/cursos/eja/page": "app/cursos/eja/page.js",
-  "/cursos/profissionalizante/page": "app/cursos/profissionalizante/page.js",
-  "/equipe_pagina/page": "app/equipe_pagina/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/sobre_nos/page": "app/sobre_nos/page.js"
+  "/page": "app/page.js"
 }

@@ -8,7 +8,7 @@ interface Props {
     prevPage: () => void;
 }
 
-export default function Step2({ studentData, handleInputChange, prevPage, nextPage }: Props) {
+export default function Step3({ studentData, handleInputChange, prevPage, nextPage }: Props) {
     return (
         <div className="register-container">
             <div className="register-card">

@@ -1476,11 +1476,78 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
-    "default": (()=>Step2)
+    "default": (()=>Step4)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
-function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
+var _s = __turbopack_context__.k.signature();
+;
+function Step4({ studentData, handleInputChange, prevPage, setStudentData }) {
+    _s();
+    const [cursos, setCursos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [availableShifts, setAvailableShifts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Step4.useEffect": ()=>{
+            async function fetchCursos() {
+                try {
+                    const response = await fetch("http://localhost:3000/getProfisCursos");
+                    const data = await response.json();
+                    // normaliza os campos de turno
+                    const normalized = data.map({
+                        "Step4.useEffect.fetchCursos.normalized": (c)=>({
+                                id: c.id,
+                                name: c.name,
+                                morningShift: Boolean(c.morningShiftAvailable),
+                                afternoonShift: Boolean(c.afternoonShiftAvailable),
+                                nightShift: Boolean(c.nightShiftAvailable)
+                            })
+                    }["Step4.useEffect.fetchCursos.normalized"]);
+                    console.log("Cursos normalizados:", normalized);
+                    setCursos(normalized);
+                } catch (error) {
+                    console.error("Erro ao buscar cursos:", error);
+                }
+            }
+            fetchCursos();
+        }
+    }["Step4.useEffect"], []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Step4.useEffect": ()=>{
+            console.log("Curso selecionado:", studentData.applyCourse);
+            console.log("Cursos disponíveis:", cursos);
+            if (!cursos.length || !studentData.applyCourse) return;
+            const selectedCurso = cursos.find({
+                "Step4.useEffect.selectedCurso": (curso)=>curso.id === Number(studentData.applyCourse)
+            }["Step4.useEffect.selectedCurso"]);
+            console.log("Curso encontrado:", selectedCurso);
+            if (selectedCurso) {
+                const turnos = [];
+                if (selectedCurso.morningShift) turnos.push('matutino');
+                if (selectedCurso.afternoonShift) turnos.push('vespertino');
+                if (selectedCurso.nightShift) turnos.push('noturno');
+                console.log("Turnos disponíveis:", turnos);
+                setAvailableShifts(turnos);
+            } else {
+                setAvailableShifts([]);
+            }
+        }
+    }["Step4.useEffect"], [
+        studentData.applyCourse,
+        cursos
+    ]);
+    function formatTurno(turno) {
+        switch(turno){
+            case 'matutino':
+                return 'Matutino (07:50-12:00)';
+            case 'vespertino':
+                return 'Vespertino (15:50-18:00)';
+            case 'noturno':
+                return 'Noturno (19:00-23:00)';
+            default:
+                return turno;
+        }
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "register-container",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1492,12 +1559,12 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                         children: " Matrícula Online no Profissionalizante"
                     }, void 0, false, {
                         fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                        lineNumber: 16,
+                        lineNumber: 82,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 15,
+                    lineNumber: 81,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1508,7 +1575,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Grau de escolaridade: "
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 19,
+                            lineNumber: 85,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1524,7 +1591,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                     children: "Selecione seu grau de escolaridade"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 27,
+                                    lineNumber: 93,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1532,7 +1599,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                     children: "Ensino Fundamental I"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 28,
+                                    lineNumber: 94,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1540,7 +1607,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                     children: "Ensino Fundamental II"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 29,
+                                    lineNumber: 95,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1548,24 +1615,24 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                     children: "Ensino Médio"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 30,
+                                    lineNumber: 96,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 20,
+                            lineNumber: 86,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 18,
+                    lineNumber: 84,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 33,
+                    lineNumber: 99,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1576,7 +1643,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Possui algum tipo de deficiência?"
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 35,
+                            lineNumber: 101,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1586,7 +1653,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             type: "radio",
-                                            name: "legacyStudent",
+                                            name: "disabledStudent",
                                             value: "true",
                                             checked: studentData.disabledStudent === true,
                                             onChange: (e)=>setStudentData({
@@ -1595,21 +1662,21 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                            lineNumber: 38,
+                                            lineNumber: 104,
                                             columnNumber: 29
                                         }, this),
                                         "Sim"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 37,
+                                    lineNumber: 103,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             type: "radio",
-                                            name: "legacyStudent",
+                                            name: "disabledStudent",
                                             value: "false",
                                             checked: studentData.disabledStudent === false,
                                             onChange: (e)=>setStudentData({
@@ -1618,31 +1685,31 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                            lineNumber: 51,
+                                            lineNumber: 117,
                                             columnNumber: 29
                                         }, this),
                                         "Não"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 116,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 36,
+                            lineNumber: 102,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 34,
+                    lineNumber: 100,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 64,
+                    lineNumber: 130,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1653,7 +1720,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Possui alguma necessidade especial? Se sim, infome abaixo"
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 66,
+                            lineNumber: 132,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1665,18 +1732,18 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             placeholder: "Exemplo: Cadeirante"
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 67,
+                            lineNumber: 133,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 75,
+                            lineNumber: 141,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 65,
+                    lineNumber: 131,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1687,7 +1754,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Anexe seu Laudo Médico (Para Estudante com Deficiência)"
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 78,
+                            lineNumber: 144,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1697,18 +1764,18 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             onChange: handleInputChange
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 79,
+                            lineNumber: 145,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 77,
+                    lineNumber: 143,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 81,
+                    lineNumber: 147,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1719,7 +1786,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Curso desejado: "
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 83,
+                            lineNumber: 149,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1735,48 +1802,32 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                                     children: "Selecione o curso desejado"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 157,
                                     columnNumber: 25
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "cozinheiro",
-                                    children: "Cozinheiro"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 92,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "op-comp",
-                                    children: "Operador de Computador"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 93,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "assis-adm",
-                                    children: "Assistente Administrativo"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 94,
-                                    columnNumber: 25
-                                }, this)
+                                cursos.map((curso, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                        value: curso.id,
+                                        children: curso.name
+                                    }, curso.id, false, {
+                                        fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
+                                        lineNumber: 159,
+                                        columnNumber: 29
+                                    }, this))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 84,
+                            lineNumber: 150,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 82,
+                    lineNumber: 148,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 97,
+                    lineNumber: 165,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1787,7 +1838,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Turno desejado: "
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 99,
+                            lineNumber: 167,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1795,66 +1846,51 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             name: "applyShift",
                             value: studentData.applyShift,
                             onChange: handleInputChange,
+                            disabled: !availableShifts.length,
                             required: true,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                     value: "",
                                     disabled: true,
-                                    children: "Selecione o turno desejado"
+                                    children: "Selecione o turno"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 176,
                                     columnNumber: 25
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "matutino",
-                                    children: "Matutino (07:50-12:00)"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 108,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "vespertino",
-                                    children: "Vespertino (15:50-18:00)"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 109,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                    value: "noturno",
-                                    children: "Noturno (19:00-23:00)"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                                    lineNumber: 110,
-                                    columnNumber: 25
-                                }, this)
+                                availableShifts.map((shift)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                        value: shift,
+                                        children: formatTurno(shift)
+                                    }, shift, false, {
+                                        fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
+                                        lineNumber: 178,
+                                        columnNumber: 29
+                                    }, this))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 100,
+                            lineNumber: 168,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 98,
+                    lineNumber: 166,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 113,
+                    lineNumber: 185,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 115,
+                    lineNumber: 187,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 117,
+                    lineNumber: 189,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1867,7 +1903,7 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Voltar"
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 120,
+                            lineNumber: 192,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1876,30 +1912,31 @@ function Step2({ studentData, handleInputChange, prevPage, setStudentData }) {
                             children: "Registrar"
                         }, void 0, false, {
                             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                            lineNumber: 121,
+                            lineNumber: 193,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-                    lineNumber: 119,
+                    lineNumber: 191,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-            lineNumber: 14,
+            lineNumber: 80,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/cadastro/profissionalizante/Step4.tsx",
-        lineNumber: 13,
+        lineNumber: 79,
         columnNumber: 9
     }, this);
 }
-_c = Step2;
+_s(Step4, "aPxiNAA3vAuBE5EVXYsy4+CNDuA=");
+_c = Step4;
 var _c;
-__turbopack_context__.k.register(_c, "Step2");
+__turbopack_context__.k.register(_c, "Step4");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }

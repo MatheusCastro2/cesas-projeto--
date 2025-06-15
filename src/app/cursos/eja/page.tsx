@@ -44,7 +44,7 @@ export default function CursoEja() {
             <div className="pagina-cursos">
                 <br></br>
                 <br></br>
-                <h1 className="texto-de-cursos">Cursos Disponiveis</h1>
+                <h1 className="texto-de-cursos">Cursos Ofertados</h1>
                 <br></br>
                 <br></br>
                 <ul className="lista-cursos">

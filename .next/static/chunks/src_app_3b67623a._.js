@@ -14,7 +14,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function DropdownCoursesMenu({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "dropdown-menu",
+        className: "cesas-dropdown-menu",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -80,7 +80,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function DropdownRegisterMenu({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "dropdown-menu",
+        className: "cesas-dropdown-menu",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -146,7 +146,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function DropdownFaqMenu({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "dropdown-menu",
+        className: "cesas-dropdown-menu",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -203,6 +203,73 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
+// 'use client'
+// import Link from 'next/link';
+// import './styles.css';
+// import { useState } from 'react';
+// import { FiChevronDown } from 'react-icons/fi'
+// import DropdownCoursesMenu from './DropdownCoursesMenu';
+// import DropdownRegisterMenu from './DropdownRegisterMenu';
+// import DropdownFaqMenu from './DropdownFaqMenu';
+// export default function Cabecalho() {
+//     const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false);
+//     const [registerDropdownOpen, setRegisterDropdownOpen] = useState(false);
+//     const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
+//     return (
+//         <header className='cabecalho'>
+//             <Link href="/" onClick={() => setCoursesDropdownOpen(false)}>
+//                 <img src={'/assets/Logo_Cesas2.jpeg'} alt="Logo CESAS" style={{ width: '200px' }} />
+//             </Link>
+//             <nav>
+//                 <ul className='lista-cabecalho'>
+//                     <li>
+//                         <a href="http://localhost:3000/admin/login">
+//                             Área Administrativa
+//                         </a>
+//                     </li>
+//                     <li>
+//                         <a href="https://moodle.com/pt-br/">
+//                             Área do Aluno
+//                         </a>
+//                     </li>
+//                     <li className='dropdown-container'>
+//                         <button className="dropdown-toggle" onClick={() => {setCoursesDropdownOpen(!coursesDropdownOpen)
+//                             setFaqDropdownOpen(false);
+//                             setRegisterDropdownOpen(false);
+//                         }}>Cursos
+//                             <FiChevronDown />
+//                         </button>
+//                         {coursesDropdownOpen && (
+//                             <DropdownCoursesMenu onClose={() => setCoursesDropdownOpen(false)} />
+//                         )}
+//                     </li>
+//                     <li className='dropdown-container'>
+//                         <button className="dropdown-toggle" onClick={() => {setFaqDropdownOpen(!faqDropdownOpen)
+//                             setCoursesDropdownOpen(false);
+//                             setRegisterDropdownOpen(false);
+//                         }}>Perguntas e Respostas
+//                             <FiChevronDown />
+//                         </button>
+//                         {faqDropdownOpen && (
+//                             <DropdownFaqMenu onClose={() => setFaqDropdownOpen(false)} />
+//                         )}
+//                     </li>
+//                     <li className='dropdown-container'>
+//                         <button className="botao-registrar" onClick={() => {setRegisterDropdownOpen(!registerDropdownOpen)
+//                             setCoursesDropdownOpen(false);
+//                             setFaqDropdownOpen(false);
+//                         }}>Matricular-se
+//                             <FiChevronDown />
+//                         </button>
+//                         {registerDropdownOpen && (
+//                             <DropdownRegisterMenu onClose={() => setRegisterDropdownOpen(false)} />
+//                         )}
+//                     </li>
+//                 </ul>
+//             </nav>
+//         </header>
+//     )
+// }
 __turbopack_context__.s({
     "default": (()=>Cabecalho)
 });
@@ -229,7 +296,7 @@ function Cabecalho() {
     const [registerDropdownOpen, setRegisterDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [faqDropdownOpen, setFaqDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "cabecalho",
+        className: "cesas-cabecalho",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: "/",
@@ -237,22 +304,23 @@ function Cabecalho() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                     src: '/assets/Logo_Cesas2.jpeg',
                     alt: "Logo CESAS",
+                    className: "cesas-logo",
                     style: {
                         width: '200px'
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                    lineNumber: 18,
+                    lineNumber: 90,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                lineNumber: 17,
+                lineNumber: 89,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "lista-cabecalho",
+                    className: "cesas-lista-cabecalho",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -260,12 +328,12 @@ function Cabecalho() {
                                 children: "Área Administrativa"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                                lineNumber: 24,
+                                lineNumber: 100,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 23,
+                            lineNumber: 99,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -274,19 +342,19 @@ function Cabecalho() {
                                 children: "Área do Aluno"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                                lineNumber: 29,
+                                lineNumber: 105,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 28,
+                            lineNumber: 104,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "dropdown-container",
+                            className: "cesas-dropdown-container",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "dropdown-toggle",
+                                    className: "cesas-dropdown-toggle",
                                     onClick: ()=>{
                                         setCoursesDropdownOpen(!coursesDropdownOpen);
                                         setFaqDropdownOpen(false);
@@ -296,33 +364,33 @@ function Cabecalho() {
                                         "Cursos",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 38,
+                                            lineNumber: 116,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 110,
                                     columnNumber: 25
                                 }, this),
                                 coursesDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownCoursesMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setCoursesDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 119,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 33,
+                            lineNumber: 109,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "dropdown-container",
+                            className: "cesas-dropdown-container",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "dropdown-toggle",
+                                    className: "cesas-dropdown-toggle",
                                     onClick: ()=>{
                                         setFaqDropdownOpen(!faqDropdownOpen);
                                         setCoursesDropdownOpen(false);
@@ -332,33 +400,33 @@ function Cabecalho() {
                                         "Perguntas e Respostas",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 129,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 123,
                                     columnNumber: 25
                                 }, this),
                                 faqDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownFaqMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setFaqDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 132,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 44,
+                            lineNumber: 122,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "dropdown-container",
+                            className: "cesas-dropdown-container",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "botao-registrar",
+                                    className: "cesas-botao-registrar",
                                     onClick: ()=>{
                                         setRegisterDropdownOpen(!registerDropdownOpen);
                                         setCoursesDropdownOpen(false);
@@ -368,43 +436,43 @@ function Cabecalho() {
                                         "Matricular-se",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 142,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 56,
+                                    lineNumber: 136,
                                     columnNumber: 25
                                 }, this),
                                 registerDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownRegisterMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setRegisterDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 145,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 55,
+                            lineNumber: 135,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                    lineNumber: 21,
+                    lineNumber: 98,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                lineNumber: 20,
+                lineNumber: 97,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/cabecalho/index.tsx",
-        lineNumber: 16,
+        lineNumber: 88,
         columnNumber: 9
     }, this);
 }

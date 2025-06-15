@@ -45,7 +45,7 @@
     border: none;
     border-radius: 12px;
     padding: 1.5rem 2rem;
-    width: 400px;
+    /* width: 400px; */
     height: 120px;
     display: flex;
     flex-direction: column;

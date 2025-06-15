@@ -1,18 +1,48 @@
 /* [project]/src/app/cabecalho/styles.css [app-client] (css) */
-.cabecalho {
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link.show {
+  color: #d9d9d9 !important;
+}
+
+.nav-item-custom {
+  background-color: #fff;
+  border: 1px solid #3b82f6;
+  border-radius: 18px;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  height: 100%;
+  padding: .375rem 1.25rem;
+  line-height: 1;
+  transition: background-color .2s, color .2s;
+  display: flex;
+  color: #3b82f6 !important;
+}
+
+.nav-item-custom:hover {
+  background-color: #3b82f6;
+  color: #fff !important;
+}
+
+.cesas-cabecalho {
   background: #5a9bfc;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: .5rem 2rem;
   display: flex;
 }
 
-.logo {
+.bg-menu {
+  background: #5a9bfc !important;
+}
+
+.cesas-logo {
   height: 40px;
 }
 
-.lista-cabecalho {
+.cesas-lista-cabecalho {
   align-items: center;
   gap: 1.5rem;
   margin: 0;
@@ -22,14 +52,14 @@
   display: flex;
 }
 
-.lista-cabecalho li a {
+.cesas-lista-cabecalho li a {
   color: #fff;
   font-weight: 500;
   text-decoration: none;
   position: relative;
 }
 
-.lista-cabecalho li a:after {
+.cesas-lista-cabecalho li a:after {
   content: "";
   background: #fff;
   width: 0;
@@ -40,11 +70,11 @@
   left: 0;
 }
 
-.lista-cabecalho li a:hover:after {
+.cesas-lista-cabecalho li a:hover:after {
   width: 100%;
 }
 
-.botao-acessar {
+.cesas-botao-acessar {
   color: #fff;
   cursor: pointer;
   background-color: #3b82f6;
@@ -55,11 +85,11 @@
   transition: background-color .2s;
 }
 
-.botao-acessar:hover {
+.cesas-botao-acessar:hover {
   background-color: #2563eb;
 }
 
-.botao-registrar {
+.cesas-botao-registrar {
   color: #3b82f6;
   cursor: pointer;
   background-color: #fff;
@@ -74,12 +104,12 @@
   display: flex;
 }
 
-.botao-registrar:hover {
+.cesas-botao-registrar:hover {
   color: #fff;
   background-color: #3b82f6;
 }
 
-.botao-faq {
+.cesas-botao-faq {
   color: #fff;
   cursor: pointer;
   background-color: #3b82f6;
@@ -90,33 +120,50 @@
   transition: background-color .2s;
 }
 
-.botao-faq:hover {
+.cesas-botao-faq:hover {
   background-color: #2563eb;
 }
 
-.dropdown-container {
+.cesas-dropdown-container {
   position: relative;
 }
 
-.dropdown-toggle {
+.cesas-dropdown-toggle {
   cursor: pointer;
   color: #fff;
   background: #5a9bfc;
   border: none;
   align-items: center;
   gap: .3rem;
+  padding: 0;
   font-size: 17px;
   font-weight: 600;
   transition: background-color .2s, color .2s;
   display: flex;
+  position: relative;
 }
 
-.dropdown-toggle:hover {
+.cesas-dropdown-toggle:hover {
   color: #fff;
   background-color: #3b82f6;
 }
 
-.dropdown-menu {
+.cesas-dropdown-toggle:after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.cesas-dropdown-toggle:hover:after {
+  width: 100%;
+}
+
+.cesas-dropdown-menu {
   z-index: 100;
   background: #fff;
   border: 1px solid #ccc;
@@ -126,24 +173,24 @@
   left: 0;
 }
 
-.dropdown-menu ul {
+.cesas-dropdown-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.dropdown-menu li {
+.cesas-dropdown-menu li {
   margin: .3rem 0;
 }
 
-.dropdown-menu li a {
+.cesas-dropdown-menu li a {
   color: #3b82f6;
   font-weight: 600;
   text-decoration: none;
   position: relative;
 }
 
-.dropdown-menu li a:after {
+.cesas-dropdown-menu li a:after {
   content: "";
   background: #5a9bfc;
   width: 0;
@@ -154,34 +201,7 @@
   left: 0;
 }
 
-.dropdown-menu li a:hover:after {
-  width: 100%;
-}
-
-.dropdown-container .dropdown-toggle {
-  color: #fff;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 17px;
-  font-weight: 500;
-  text-decoration: none;
-  position: relative;
-}
-
-.dropdown-container .dropdown-toggle:after {
-  content: "";
-  background: #fff;
-  width: 0;
-  height: 2px;
-  transition: width .3s;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-}
-
-.dropdown-container .dropdown-toggle:hover:after {
+.cesas-dropdown-menu li a:hover:after {
   width: 100%;
 }
 
@@ -215,7 +235,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
   height: 120px;
   padding: 1.5rem 2rem;
   font-size: 1rem;
@@ -232,12 +251,15 @@
 
 /* [project]/src/app/cards_infos/styles.css [app-client] (css) */
 .lista-cards {
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 1rem;
+  display: flex;
+}
+
+.cards {
+  flex-wrap: wrap;
+  justify-content: center;
   display: flex;
 }
 
@@ -246,31 +268,26 @@
   padding: 0;
 }
 
-.cards {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  display: flex;
-}
-
 .card {
-  background-color: #fff;
   border: 2px solid #5a9bfc;
   border-radius: 8px;
-  flex-direction: column;
-  width: 200px;
-  height: auto;
+  margin: 0 auto;
   transition: all .3s;
-  display: flex;
   overflow: hidden;
   box-shadow: 0 4px 8px #0000000d;
 }
 
-.card h2, .card p {
-  color: #333;
-  margin: 1rem;
-  font-size: .9rem;
+.card-custom {
+  background-color: #fff;
+  border-radius: 12px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  min-height: 100px;
+  transition: all .3s;
+  display: flex;
+  box-shadow: 0 2px 10px #0000001a;
 }
 
 .detalhes {
@@ -284,18 +301,25 @@
 .card.aberto .detalhes {
   opacity: 1;
   max-height: 200px;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.titulo-card {
+  text-align: center;
+  margin: 1rem auto .5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .botao-imagem {
   cursor: pointer;
   background-color: #5a9bfc;
   border: none;
-  border-top: 2px solid #5a9bfc;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: .75rem;
+  margin-top: auto;
+  padding: .2rem 0;
   transition: background-color .2s;
   display: flex;
 }
@@ -305,13 +329,20 @@
 }
 
 .botao-imagem img {
-  width: 20px;
+  width: 18px;
   height: auto;
   transition: transform .3s;
 }
 
 .card.aberto .botao-imagem img {
   transform: rotate(180deg);
+}
+
+@media (width <= 576px) {
+  .card-custom {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 }
 
 

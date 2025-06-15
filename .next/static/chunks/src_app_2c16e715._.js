@@ -14,7 +14,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function DropdownCoursesMenu({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "dropdown-menu",
+        className: "cesas-dropdown-menu",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -80,7 +80,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function DropdownRegisterMenu({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "dropdown-menu",
+        className: "cesas-dropdown-menu",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -146,7 +146,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function DropdownFaqMenu({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "dropdown-menu",
+        className: "cesas-dropdown-menu",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -203,6 +203,73 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
+// 'use client'
+// import Link from 'next/link';
+// import './styles.css';
+// import { useState } from 'react';
+// import { FiChevronDown } from 'react-icons/fi'
+// import DropdownCoursesMenu from './DropdownCoursesMenu';
+// import DropdownRegisterMenu from './DropdownRegisterMenu';
+// import DropdownFaqMenu from './DropdownFaqMenu';
+// export default function Cabecalho() {
+//     const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false);
+//     const [registerDropdownOpen, setRegisterDropdownOpen] = useState(false);
+//     const [faqDropdownOpen, setFaqDropdownOpen] = useState(false);
+//     return (
+//         <header className='cabecalho'>
+//             <Link href="/" onClick={() => setCoursesDropdownOpen(false)}>
+//                 <img src={'/assets/Logo_Cesas2.jpeg'} alt="Logo CESAS" style={{ width: '200px' }} />
+//             </Link>
+//             <nav>
+//                 <ul className='lista-cabecalho'>
+//                     <li>
+//                         <a href="http://localhost:3000/admin/login">
+//                             Área Administrativa
+//                         </a>
+//                     </li>
+//                     <li>
+//                         <a href="https://moodle.com/pt-br/">
+//                             Área do Aluno
+//                         </a>
+//                     </li>
+//                     <li className='dropdown-container'>
+//                         <button className="dropdown-toggle" onClick={() => {setCoursesDropdownOpen(!coursesDropdownOpen)
+//                             setFaqDropdownOpen(false);
+//                             setRegisterDropdownOpen(false);
+//                         }}>Cursos
+//                             <FiChevronDown />
+//                         </button>
+//                         {coursesDropdownOpen && (
+//                             <DropdownCoursesMenu onClose={() => setCoursesDropdownOpen(false)} />
+//                         )}
+//                     </li>
+//                     <li className='dropdown-container'>
+//                         <button className="dropdown-toggle" onClick={() => {setFaqDropdownOpen(!faqDropdownOpen)
+//                             setCoursesDropdownOpen(false);
+//                             setRegisterDropdownOpen(false);
+//                         }}>Perguntas e Respostas
+//                             <FiChevronDown />
+//                         </button>
+//                         {faqDropdownOpen && (
+//                             <DropdownFaqMenu onClose={() => setFaqDropdownOpen(false)} />
+//                         )}
+//                     </li>
+//                     <li className='dropdown-container'>
+//                         <button className="botao-registrar" onClick={() => {setRegisterDropdownOpen(!registerDropdownOpen)
+//                             setCoursesDropdownOpen(false);
+//                             setFaqDropdownOpen(false);
+//                         }}>Matricular-se
+//                             <FiChevronDown />
+//                         </button>
+//                         {registerDropdownOpen && (
+//                             <DropdownRegisterMenu onClose={() => setRegisterDropdownOpen(false)} />
+//                         )}
+//                     </li>
+//                 </ul>
+//             </nav>
+//         </header>
+//     )
+// }
 __turbopack_context__.s({
     "default": (()=>Cabecalho)
 });
@@ -229,7 +296,7 @@ function Cabecalho() {
     const [registerDropdownOpen, setRegisterDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [faqDropdownOpen, setFaqDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "cabecalho",
+        className: "cesas-cabecalho",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: "/",
@@ -237,22 +304,23 @@ function Cabecalho() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                     src: '/assets/Logo_Cesas2.jpeg',
                     alt: "Logo CESAS",
+                    className: "cesas-logo",
                     style: {
                         width: '200px'
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                    lineNumber: 18,
+                    lineNumber: 90,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                lineNumber: 17,
+                lineNumber: 89,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "lista-cabecalho",
+                    className: "cesas-lista-cabecalho",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -260,12 +328,12 @@ function Cabecalho() {
                                 children: "Área Administrativa"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                                lineNumber: 24,
+                                lineNumber: 100,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 23,
+                            lineNumber: 99,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -274,125 +342,137 @@ function Cabecalho() {
                                 children: "Área do Aluno"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                                lineNumber: 29,
+                                lineNumber: 105,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 28,
+                            lineNumber: 104,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "dropdown-container",
+                            className: "cesas-dropdown-container",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "dropdown-toggle",
-                                    onClick: ()=>setCoursesDropdownOpen(!coursesDropdownOpen),
+                                    className: "cesas-dropdown-toggle",
+                                    onClick: ()=>{
+                                        setCoursesDropdownOpen(!coursesDropdownOpen);
+                                        setFaqDropdownOpen(false);
+                                        setRegisterDropdownOpen(false);
+                                    },
                                     children: [
                                         "Cursos",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 35,
+                                            lineNumber: 116,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 110,
                                     columnNumber: 25
                                 }, this),
                                 coursesDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownCoursesMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setCoursesDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 119,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 33,
+                            lineNumber: 109,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "dropdown-container",
+                            className: "cesas-dropdown-container",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "dropdown-toggle",
-                                    onClick: ()=>setFaqDropdownOpen(!faqDropdownOpen),
+                                    className: "cesas-dropdown-toggle",
+                                    onClick: ()=>{
+                                        setFaqDropdownOpen(!faqDropdownOpen);
+                                        setCoursesDropdownOpen(false);
+                                        setRegisterDropdownOpen(false);
+                                    },
                                     children: [
                                         "Perguntas e Respostas",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 43,
+                                            lineNumber: 129,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 123,
                                     columnNumber: 25
                                 }, this),
                                 faqDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownFaqMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setFaqDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 132,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 41,
+                            lineNumber: 122,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "dropdown-container",
+                            className: "cesas-dropdown-container",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "botao-registrar",
-                                    onClick: ()=>setRegisterDropdownOpen(!registerDropdownOpen),
+                                    className: "cesas-botao-registrar",
+                                    onClick: ()=>{
+                                        setRegisterDropdownOpen(!registerDropdownOpen);
+                                        setCoursesDropdownOpen(false);
+                                        setFaqDropdownOpen(false);
+                                    },
                                     children: [
                                         "Matricular-se",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                                            lineNumber: 51,
+                                            lineNumber: 142,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 136,
                                     columnNumber: 25
                                 }, this),
                                 registerDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$cabecalho$2f$DropdownRegisterMenu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     onClose: ()=>setRegisterDropdownOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 145,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/cabecalho/index.tsx",
-                            lineNumber: 49,
+                            lineNumber: 135,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/cabecalho/index.tsx",
-                    lineNumber: 21,
+                    lineNumber: 98,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/cabecalho/index.tsx",
-                lineNumber: 20,
+                lineNumber: 97,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/cabecalho/index.tsx",
-        lineNumber: 16,
+        lineNumber: 88,
         columnNumber: 9
     }, this);
 }
@@ -413,9 +493,37 @@ __turbopack_context__.s({
     "default": (()=>Rodape)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
 ;
 ;
 function Rodape() {
+    _s();
+    const [footerData, setFooterData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        siteLink: '',
+        youtubeLink: '',
+        instagramLink: '',
+        facebookLink: '',
+        whatsappLink: '',
+        phone: '',
+        email: ''
+    });
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Rodape.useEffect": ()=>{
+            async function fetchFormTitle() {
+                try {
+                    const response = await fetch('http://localhost:3000/getFooterData'); // método GET
+                    const data = await response.json();
+                    setFooterData(data);
+                } catch (error) {
+                    console.error("Erro ao buscar título do formulário:", error);
+                }
+            }
+            fetchFormTitle();
+        }
+    }["Rodape.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "footer-container",
@@ -427,7 +535,7 @@ function Rodape() {
                             children: "Centro de Educação de Jovens e Adultos Asa Sul-Cesas"
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 9,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -437,23 +545,23 @@ function Rodape() {
                                     alt: "Site oficial do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 11,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://www.cesas.se.df.gov.br/ead/",
+                                    href: footerData.siteLink,
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     children: "Site"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 12,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 10,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -463,21 +571,23 @@ function Rodape() {
                                     alt: "Telefone de contato"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 17,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "tel:+5561991184868",
-                                    children: "+55 (61) 99118-4868"
+                                    href: 'tel:' + footerData.phone,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    children: footerData.phone
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 18,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 16,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -487,27 +597,29 @@ function Rodape() {
                                     alt: "E-mail de contato"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 21,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "mailto:presencacesas@gmail.com",
-                                    children: "presencacesas@gmail.com"
+                                    href: 'mailto:' + footerData.email,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    children: footerData.email
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 22,
+                                    lineNumber: 50,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 20,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/rodape/index.tsx",
-                    lineNumber: 8,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -515,7 +627,7 @@ function Rodape() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://www.facebook.com/cesas.planopiloto",
+                                href: footerData.facebookLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -523,22 +635,22 @@ function Rodape() {
                                     alt: "Facebook oficial do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 29,
+                                    lineNumber: 59,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 28,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 27,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://www.instagram.com/c.e.s.a.s/",
+                                href: footerData.instagramLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -546,22 +658,22 @@ function Rodape() {
                                     alt: "Instagram oficial do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 64,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 33,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 32,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://api.whatsapp.com/send?phone=+5561991184868",
+                                href: footerData.whatsappLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -569,22 +681,22 @@ function Rodape() {
                                     alt: "WhatsApp do CESAS"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 39,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 38,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 37,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "https://www.youtube.com/@CREPlanoPiloto-tw8wj",
+                                href: footerData.youtubeLink,
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -592,37 +704,38 @@ function Rodape() {
                                     alt: "Canal do CESAS no YouTube"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/rodape/index.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 74,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/rodape/index.tsx",
-                                lineNumber: 43,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/rodape/index.tsx",
-                            lineNumber: 42,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/rodape/index.tsx",
-                    lineNumber: 25,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/rodape/index.tsx",
-            lineNumber: 7,
+            lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/rodape/index.tsx",
-        lineNumber: 6,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
+_s(Rodape, "l9I5crDTrZuSdqePsyG9xXinDA4=");
 _c = Rodape;
 var _c;
 __turbopack_context__.k.register(_c, "Rodape");

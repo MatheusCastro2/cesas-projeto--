@@ -1,9 +1,29 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles.css';
 
+interface Card {
+    id: number;
+    title: string;
+    description: string;
+}
+
 export default function Cards() {
-  const [abertos, setAbertos] = useState([false, false, false, false]);
+  const [cards, setCards] = useState<Card[]>([]);
+          useEffect(() => {
+              async function fetchCards() {
+                  try {
+                      const response = await fetch("http://localhost:3000/getCards"); // rota certa aqui
+                      const data = await response.json();
+                      setCards(data);
+                  } catch (error) {
+                      console.error("Erro ao buscar cursos:", error);
+                  }
+              }
+      
+              fetchCards();
+          }, []);
+  const [abertos, setAbertos] = useState([false]);
 
   const alternarCard = (index: number) => {
     const novos = [...abertos];
@@ -11,31 +31,34 @@ export default function Cards() {
     setAbertos(novos);
   };
 
-  const dados = [
-    { titulo: "Card 1", descricao: "Descrição do Card 1", detalhes: "Mais informações sobre o Card 1." },
-    { titulo: "Card 2", descricao: "Descrição do Card 2", detalhes: "Mais informações sobre o Card 2." },
-    { titulo: "Card 3", descricao: "Descrição do Card 3", detalhes: "Mais informações sobre o Card 3." },
-    { titulo: "Card 4", descricao: "Descrição do Card 4", detalhes: "Mais informações sobre o Card 4." },
-  ];
+  // const dados = [
+  //   { titulo: "Quando posso me inscrever?",  detalhes: "Para o EJA, você pode se inscrever a qualquer momento! Já para o profissionalizante a matrícula deve ser feita no início do semestre." },
+  //   { titulo: "Os cursos são gratuitos?",  detalhes: "O CESAS é uma escola pública da Secretaria de Estado de Educação do Distrito Federal. Portanto, todos os cursos oferecidos aqui são gratuitos." },
+  //   { titulo: "Onde a escola se localiza?", detalhes: "SGAS II St. de Grandes Áreas Sul 602 - Brasília, DF, 70200-620" },
+  //   { titulo: "Posso fazer mais de um curso?",  detalhes: "Você pode se inscrever em mais de um curso desde que eles estejam em turnos diferentes, por exemplo, um curso de manhã e outro de tarde." },
+  // ];
+
 
   return (
-    <section className='cards'>
-      <ul className='lista-cards'>
-        {dados.map((card, index) => (
-          <li key={index}>
-            <div className={`card ${abertos[index] ? 'aberto' : ''}`}>
-              <h2>{card.titulo}</h2>
-              <p>{card.descricao}</p>
+    
+
+      <div className='lista-cards'>
+        <div className="row g-4 justify-content center">
+        {cards.map((card, index) => (
+          <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+            <div className={`card card-custom ${abertos[index] ? 'aberto' : ''}`}>
+              <h5 className='titulo-card'>{card.title}</h5>
+              {/* <p>{card.descricao}</p> */}
               <div className="detalhes">
-                <p>{card.detalhes}</p>
+                <p>{card.description}</p>
               </div>
-              <button className="botao-imagem houver-simulado" onClick={() => alternarCard(index)}>
+              <button className="botao-imagem" onClick={() => alternarCard(index)}>
                 <img src='/assets/seta_baixo.svg' alt="Expandir card" />
               </button>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
-    </section>
+        </div>
+      </div>
   );
 }

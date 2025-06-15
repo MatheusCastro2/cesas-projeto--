@@ -6,7 +6,7 @@ interface Props {
 }
 export default function DropdownCoursesMenu({onClose} : Props) {
 return(
-    <div className="dropdown-menu">
+    <div className="cesas-dropdown-menu">
         <ul>
             <li>
                 <Link href="/cursos/eja" onClick={onClose}>EJA </Link>

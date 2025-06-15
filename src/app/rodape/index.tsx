@@ -30,51 +30,55 @@ export default function Rodape() {
 
   return (
     <footer>
-      <div className="footer-container">
-        <ul className="links-rodape">
-          <h2>Centro de Educação de Jovens e Adultos Asa Sul-Cesas</h2>
-          <li>
-            <img src={'/assets/icon_site.svg'} alt="Site oficial do CESAS" />
-            <a href={footerData.siteLink} target="_blank" rel="noopener noreferrer">
-              Site
-            </a>
-          </li>
-          <li>
-            <img src={'/assets/icon_telefone.svg'} alt="Telefone de contato" />
-            <a href={'tel:' + footerData.phone} target="_blank" rel="noopener noreferrer">
-              {footerData.phone}
-            </a>
-          </li>
-          <li>
-            <img src='/assets/icon_email.svg' alt="E-mail de contato" />
-            <a href={'mailto:' + footerData.email} target="_blank" rel="noopener noreferrer">
-              {footerData.email}
-            </a>
-          </li>
-        </ul>
-        <ul className="redes-sociais">
+      <div className="footer-container row">
+        <div className="col-lg-6">
+          <ul className="links-rodape">
+            <h2>Centro de Educação de Jovens e Adultos Asa Sul-Cesas</h2>
+            <li>
+              <img src={'/assets/icon_site.svg'} alt="Site oficial do CESAS" />
+              <a href={footerData.siteLink} target="_blank" rel="noopener noreferrer">
+                Site
+              </a>
+            </li>
+            <li>
+              <img src={'/assets/icon_telefone.svg'} alt="Telefone de contato" />
+              <a href={'tel:' + footerData.phone} target="_blank" rel="noopener noreferrer">
+                {footerData.phone}
+              </a>
+            </li>
+            <li>
+              <img src='/assets/icon_email.svg' alt="E-mail de contato" />
+              <a href={'mailto:' + footerData.email} target="_blank" rel="noopener noreferrer">
+                {footerData.email}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="col-lg-6 d-flex justify-content-end">
+          <ul className="redes-sociais">
 
-          <li>
-            <a href={footerData.facebookLink} target="_blank" rel="noopener noreferrer">
-              <img src={'/assets/icon_facebook.svg'} alt="Facebook oficial do CESAS" />
-            </a>
-          </li>
-          <li>
-            <a href={footerData.instagramLink} target="_blank" rel="noopener noreferrer">
-              <img src={'/assets/icon_instagram.svg'} alt="Instagram oficial do CESAS" />
-            </a>
-          </li>
-          <li>
-            <a href={footerData.whatsappLink} target="_blank" rel="noopener noreferrer">
-              <img src={'/assets/icon_whats.svg'} alt="WhatsApp do CESAS" />
-            </a>
-          </li>
-          <li>
-            <a href={footerData.youtubeLink} target="_blank" rel="noopener noreferrer">
-              <img src={'/assets/icon_youtube.svg'} alt="Canal do CESAS no YouTube" />
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a href={footerData.facebookLink} target="_blank" rel="noopener noreferrer">
+                <img src={'/assets/icon_facebook.svg'} alt="Facebook oficial do CESAS" />
+              </a>
+            </li>
+            <li>
+              <a href={footerData.instagramLink} target="_blank" rel="noopener noreferrer">
+                <img src={'/assets/icon_instagram.svg'} alt="Instagram oficial do CESAS" />
+              </a>
+            </li>
+            <li>
+              <a href={footerData.whatsappLink} target="_blank" rel="noopener noreferrer">
+                <img src={'/assets/icon_whats.svg'} alt="WhatsApp do CESAS" />
+              </a>
+            </li>
+            <li>
+              <a href={footerData.youtubeLink} target="_blank" rel="noopener noreferrer">
+                <img src={'/assets/icon_youtube.svg'} alt="Canal do CESAS no YouTube" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
