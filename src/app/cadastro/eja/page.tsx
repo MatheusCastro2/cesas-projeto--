@@ -14,6 +14,8 @@ import Rodape from '@/app/rodape';
 import RegisterFailed from './RegisterFailed';
 import RegisterSucess from './RegisterSucess';
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 export interface StudentData {
     name: string,
     cpf: string,
@@ -151,10 +153,10 @@ export default function RegisterEJA(): ReactElement {
                 }
             }
 
-            const response = await fetch('http://localhost:3000/eja/students', {
+            const response = await fetch(`${API_HOST}/eja/students {
                 method: 'POST',
                 body: formData,
-            });
+            }`);
 
             if (!response.ok) throw new Error('Erro ao enviar dados');
 

@@ -5,11 +5,14 @@ import "../styles.css";
 import Cabecalho from "../../cabecalho";
 import Rodape from "../../rodape";
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Faq {
     id: number;
     question: string;
     answer: string;
 }
+
 
 export default function PerguntasRespostasProfissionalizante() {
   const [abertos, setAbertos] = useState([false]);
@@ -24,7 +27,7 @@ export default function PerguntasRespostasProfissionalizante() {
               useEffect(() => {
                   async function fetchFaqs() {
                       try {
-                          const response = await fetch("http://localhost:3000/getProfisFaqs"); 
+                          const response = await fetch(`${API_HOST}/getProfisFaqs`); 
                           const data = await response.json();
                           setFaqs(data);
                       } catch (error) {

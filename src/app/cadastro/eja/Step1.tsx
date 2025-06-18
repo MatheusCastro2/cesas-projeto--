@@ -4,6 +4,8 @@
 import { useEffect, useState } from "react";
 import { json } from "stream/consumers";
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Props {
 
     nextPage: () => void;
@@ -17,7 +19,7 @@ export default function Step1({ nextPage }: Props) {
     useEffect(() => {
         async function fetchFormTitle() {
             try {
-                const response = await fetch('http://localhost:3000/ejaSubmitFormTitle');  // método GET
+                const response = await fetch(`${API_HOST}/ejaSubmitFormTitle`);  // método GET
                 const data = await response.json();
 
                 if (data && data.name) {

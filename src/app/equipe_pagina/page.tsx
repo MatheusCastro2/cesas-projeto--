@@ -5,6 +5,8 @@ import Cabecalho from '../cabecalho';
 import Rodape from '../rodape';
 import './styles.css';
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Pessoa {
     id: number;
     member: string;
@@ -39,7 +41,7 @@ export default function Equipe_Pagina() {
     useEffect(() => {
         async function fetchEquipe() {
             try {
-                const response = await fetch("http://localhost:3000/getEquipe"); // rota certa aqui
+                const response = await fetch(`${API_HOST}/getEquipe`); // rota certa aqui
                 const data = await response.json();
                 const equipeFormatada: Equipe = {
                     director: data.staff[0]?.director || "",

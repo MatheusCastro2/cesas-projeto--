@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import './style.css'
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Evento {
     id: number;
     text: string;
@@ -32,7 +34,7 @@ export default function Informacoes() {
     useEffect(() => {
         async function fetchHomeData() {
             try {
-                const response = await fetch("http://localhost:3000/getHomeData"); // rota certa aqui
+                const response = await fetch(`${API_HOST}/getHomeData`); // rota certa aqui
                 const apiData = await response.json();
                 // console.log(data);
                 const transformedData: HomeData = {
@@ -53,7 +55,7 @@ export default function Informacoes() {
     return (
         <div className="card-informacoes">
             <div className="card-topo">
-                <img src={`http://localhost:3000${homeinfos.mainContent.image}`} alt="Banner" />
+                <img src={`${API_HOST}${homeinfos.mainContent.image}`} alt="Banner" />
                 <div className="card-texto">
                     <h2>Bem-vindo ao Portal do Aluno - Escola CESAS!</h2>
                     <p>{homeinfos.mainContent.text}</p>

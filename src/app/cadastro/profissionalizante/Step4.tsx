@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { StudentData } from './page';
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Props {
     studentData: StudentData;
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => void;
@@ -24,7 +26,7 @@ export default function Step4({ studentData, handleInputChange, prevPage, setStu
     useEffect(() => {
         async function fetchCursos() {
             try {
-                const response = await fetch("http://localhost:3000/getProfisCursos");
+                const response = await fetch(`${API_HOST}/getProfisCursos`);
                 const data = await response.json();
                 // normaliza os campos de turno
                 const normalized: Curso[] = data.map((c: any) => ({

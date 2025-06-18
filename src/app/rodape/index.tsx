@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 export default function Rodape() {
   const [footerData, setFooterData] = useState({
     siteLink: '',
@@ -16,7 +18,7 @@ export default function Rodape() {
   useEffect(() => {
     async function fetchFormTitle() {
       try {
-        const response = await fetch('http://localhost:3000/getFooterData');  // método GET
+        const response = await fetch(`${API_HOST}/getFooterData`);  // método GET
         const data = await response.json();
 
         setFooterData(data);

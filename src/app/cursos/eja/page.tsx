@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Cabecalho from "@/app/cabecalho";
 import Rodape from "@/app/rodape";
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Curso {
     id: number;
     name: string;
@@ -21,7 +23,7 @@ export default function CursoEja() {
         useEffect(() => {
             async function fetchCursos() {
                 try {
-                    const response = await fetch("http://localhost:3000/getEJACursos"); // rota certa aqui
+                    const response = await fetch(`${API_HOST}/getEJACursos`); // rota certa aqui
                     const data = await response.json();
                     setCursos(data);
                 } catch (error) {
@@ -51,7 +53,7 @@ export default function CursoEja() {
                     {cursos.map(curso => (
                         <li key={curso.id}>
                             <div className="curso-card">
-                                <img src={`http://localhost:3000${curso.image}`} alt={curso.name} />
+                                <img src={`${API_HOST}${curso.image}`} alt={curso.name} />
                                 <div className="curso-info">
                                     <h2>{curso.name}</h2>
                                     <br></br>

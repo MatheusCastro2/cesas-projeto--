@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+
 interface Card {
     id: number;
     title: string;
@@ -13,7 +15,7 @@ export default function Cards() {
           useEffect(() => {
               async function fetchCards() {
                   try {
-                      const response = await fetch("http://localhost:3000/getCards"); // rota certa aqui
+                      const response = await fetch(`${API_HOST}/getCards`); // rota certa aqui
                       const data = await response.json();
                       setCards(data);
                   } catch (error) {

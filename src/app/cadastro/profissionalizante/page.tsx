@@ -10,6 +10,7 @@ import Step4 from './Step4';
 import RegisterSucess from './RegisterSucess';
 import RegisterFailed from './RegisterFailed';
 
+const API_HOST = process.env.API_HOST || 'http://localhost:3000'
 
 export interface StudentData {
     name: string,
@@ -120,7 +121,7 @@ export default function RegisterProfissionalizante(): ReactElement {
                 }
             }
 
-            const response = await fetch('http://localhost:3000/professionalizing/students', {
+            const response = await fetch(`${API_HOST}/professionalizing/students`, {
                 method: 'POST',
                 body: formData,
             });
