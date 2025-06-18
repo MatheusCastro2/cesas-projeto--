@@ -1,4 +1,32 @@
 /* [project]/src/app/cabecalho/styles.css [app-client] (css) */
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link.show {
+  color: #d9d9d9 !important;
+}
+
+.nav-item-custom {
+  background-color: #fff;
+  border: 1px solid #3b82f6;
+  border-radius: 18px;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  height: 100%;
+  padding: .375rem 1.25rem;
+  line-height: 1;
+  transition: background-color .2s, color .2s;
+  display: flex;
+  color: #3b82f6 !important;
+}
+
+.nav-item-custom:hover {
+  background-color: #3b82f6;
+  color: #fff !important;
+}
+
 .cesas-cabecalho {
   background: #5a9bfc;
   justify-content: space-between;

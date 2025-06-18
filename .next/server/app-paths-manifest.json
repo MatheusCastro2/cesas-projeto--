@@ -1,8 +1,5 @@
 {
-  "/cursos/eja/page": "app/cursos/eja/page.js",
-  "/cursos/profissionalizante/page": "app/cursos/profissionalizante/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/perguntas_respostas/eja/page": "app/perguntas_respostas/eja/page.js",
-  "/perguntas_respostas/profissionalizante/page": "app/perguntas_respostas/profissionalizante/page.js"
+  "/page": "app/page.js"
 }

@@ -10,36 +10,46 @@
 }
 
 .card-topo {
+  flex-flow: wrap;
   align-items: stretch;
   display: flex;
 }
 
 .card-topo img {
   object-fit: cover;
+  border-radius: 20px 0 0 20px;
   width: 50%;
   height: auto;
   display: block;
 }
 
-.card-topo p {
+.card-texto {
   color: #fff;
   background-color: #5a9bfc;
-  border-radius: 20px;
-  align-items: center;
+  border-radius: 0 20px 20px 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
   width: 50%;
-  margin: 0;
   padding: 2rem;
   font-size: 1rem;
   line-height: 1.6;
   display: flex;
 }
 
-.card-video {
-  object-fit: cover;
-  border-radius: 0 0 20px 20px;
-  width: 100%;
-  height: auto;
-  display: block;
+@media (width <= 768px) {
+  .card-topo {
+    flex-direction: column;
+  }
+
+  .card-topo img, .card-texto {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .card-texto {
+    border-radius: 0 0 20px 20px;
+  }
 }
 
 /*# sourceMappingURL=src_app_informacoes_style_css_f9ee138c._.single.css.map*/

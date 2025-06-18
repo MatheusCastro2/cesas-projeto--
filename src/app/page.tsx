@@ -1,5 +1,5 @@
 import Cabecalho from "./cabecalho";
-import CalendarioEquipe from "./calendario_equipe";
+import SobrenosEquipe from "./sobrenos_equipe_btns";
 import Cards from "./cards_infos";
 import Informacoes from "./informacoes";
 import Rodape from "./rodape";
@@ -13,7 +13,7 @@ export default function Home() {
       <Informacoes />
       <Cards />
       <Video/>
-      <CalendarioEquipe />
+      <SobrenosEquipe />
       <Rodape />
     </div>
   );

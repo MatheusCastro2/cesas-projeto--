@@ -12,6 +12,8 @@
 .card-topo {
   display: flex;
   align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card-topo img {
@@ -19,26 +21,44 @@
   height: auto;
   object-fit: cover;
   display: block;
+  border-radius: 20px 0 0 20px; /* apenas a esquerda */
 }
 
-.card-topo p {
+.card-texto {
   width: 50%;
-    margin: 0;
-    border-radius: 20px;
-    padding: 2rem;
-    background-color: #5a9bfc;
-    color: white;
-    font-size: 1rem;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
+  padding: 2rem;
+  background-color: #5a9bfc;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0 20px 20px 0;
 }
 
-.card-video {
+@media (max-width: 768px) {
+  .card-topo {
+    flex-direction: column;
+  }
+
+  .card-topo img,
+  .card-texto {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .card-texto {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* .card-video {
   width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
   border-radius: 0 0 20px 20px;
-}
+} */
 
