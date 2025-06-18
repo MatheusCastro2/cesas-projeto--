@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/sobre_nos/styles.css"],"sourcesContent":["h1 {\n    display: flex;\n    justify-content: center;\n    color: #2b4d8c;}\n\n.sobre-nos {\n    display: flex;\n    align-items: flex-start; /* alinha pelo topo */\n    max-width: 1200px;  /* largura total do bloco */\n    margin: 0 auto;    /* centraliza na tela */\n    gap: 60px;         /* espaço entre texto e imagem */\n    padding: 20px;\n    text-align: justify;\n}\n\n.texto {\n    flex: 1;  /* o texto ocupa o máximo possível */\n}\n\n.sobre-nos img {\n    width: 600px;  \n    height: 400px; \n}\n"],"names":[],"mappings":"AAAA;;;;;;AAKA;;;;;;;;;;AAUA;;;;AAIA"}}]
-}
