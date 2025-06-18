@@ -24,7 +24,7 @@ export default function CursoProfissionalizante() {
     useEffect(() => {
         async function fetchCursos() {
             try {
-                const response = await fetch(`${API_HOST}/getProfisCurso`); // rota certa aqui
+                const response = await fetch(`${API_HOST}/getProfisCursos`); // rota certa aqui
                 const data = await response.json();
                 setCursos(data);
             } catch (error) {
