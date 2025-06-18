@@ -14,7 +14,7 @@ import Rodape from '@/app/rodape';
 import RegisterFailed from './RegisterFailed';
 import RegisterSucess from './RegisterSucess';
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 export interface StudentData {
     name: string,

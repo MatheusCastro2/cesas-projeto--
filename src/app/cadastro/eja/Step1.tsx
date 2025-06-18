@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import { json } from "stream/consumers";
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 interface Props {
 

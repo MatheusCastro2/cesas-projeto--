@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 
 interface Props {

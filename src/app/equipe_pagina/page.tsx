@@ -5,7 +5,7 @@ import Cabecalho from '../cabecalho';
 import Rodape from '../rodape';
 import './styles.css';
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 interface Pessoa {
     id: number;

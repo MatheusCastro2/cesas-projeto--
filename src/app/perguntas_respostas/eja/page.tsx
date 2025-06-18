@@ -5,7 +5,7 @@ import "../styles.css";
 import Cabecalho from "../../cabecalho";
 import Rodape from "../../rodape";
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 interface Faq {
     id: number;

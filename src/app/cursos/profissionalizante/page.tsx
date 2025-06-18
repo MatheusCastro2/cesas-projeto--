@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Cabecalho from "@/app/cabecalho";
 import Rodape from "@/app/rodape";
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 interface Curso {
     id: number;

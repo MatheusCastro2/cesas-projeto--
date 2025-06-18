@@ -9,7 +9,7 @@ import { FiChevronDown } from 'react-icons/fi';
 import DropdownCoursesMenu from './DropdownCoursesMenu';
 import DropdownRegisterMenu from './DropdownRegisterMenu';
 import DropdownFaqMenu from './DropdownFaqMenu';
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 export default function Cabecalho() {
     const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false);

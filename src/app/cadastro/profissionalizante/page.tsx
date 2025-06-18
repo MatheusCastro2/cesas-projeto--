@@ -10,7 +10,7 @@ import Step4 from './Step4';
 import RegisterSucess from './RegisterSucess';
 import RegisterFailed from './RegisterFailed';
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 export interface StudentData {
     name: string,

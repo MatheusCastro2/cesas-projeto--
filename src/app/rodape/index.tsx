@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import './styles.css';
 
-const API_HOST = process.env.API_HOST || 'http://localhost:3000'
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 export default function Rodape() {
   const [footerData, setFooterData] = useState({
