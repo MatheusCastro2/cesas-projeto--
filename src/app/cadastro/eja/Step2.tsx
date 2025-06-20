@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StudentData } from './page';
+
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3000'
 
 interface Props {
     studentData: StudentData;
@@ -9,7 +11,73 @@ interface Props {
     prevPage: () => void;
 }
 
-export default function Step2({ studentData, handleInputChange, setStudentData, nextPage,prevPage }: Props) {
+interface Curso {
+    id: number;
+    name: string;
+    morningShift: boolean;
+    afternoonShift: boolean;
+    nightShift: boolean;
+}
+
+
+export default function Step2({ studentData, handleInputChange, setStudentData, nextPage, prevPage }: Props) {
+
+    const [cursos, setCursos] = useState<Curso[]>([]);
+    const [availableShifts, setAvailableShifts] = useState<string[]>([]);
+
+
+
+    useEffect(() => {
+        async function fetchCursos() {
+            try {
+                const response = await fetch(`${API_HOST}/getEJACursos`);
+                const data = await response.json();
+                // normaliza os campos de turno
+                const normalized: Curso[] = data.map((c: any) => ({
+                    id: c.id,
+                    name: c.name,
+                    morningShift: Boolean(c.morningShiftAvailable),
+                    afternoonShift: Boolean(c.afternoonShiftAvailable),
+                    nightShift: Boolean(c.nightShiftAvailable),
+                }));
+                console.log("Cursos normalizados:", normalized);
+                setCursos(normalized);
+            } catch (error) {
+                console.error("Erro ao buscar cursos:", error);
+            }
+        }
+        fetchCursos();
+    }, []);
+
+    useEffect(() => {
+        console.log("Curso selecionado:", studentData.applyType);
+        console.log("Cursos disponíveis:", cursos);
+        if (!cursos.length || !studentData.applyType) return;
+
+        const selectedCurso = cursos.find(curso => curso.id === Number(studentData.applyType));
+        console.log("Curso encontrado:", selectedCurso);
+
+        if (selectedCurso) {
+            const turnos: string[] = [];
+            if (selectedCurso.morningShift) turnos.push('matutino');
+            if (selectedCurso.afternoonShift) turnos.push('vespertino');
+            if (selectedCurso.nightShift) turnos.push('noturno');
+            console.log("Turnos disponíveis:", turnos);
+            setAvailableShifts(turnos);
+        } else {
+            setAvailableShifts([]);
+        }
+    }, [studentData.applyType, cursos]);
+
+    function formatTurno(turno: string) {
+        switch (turno) {
+            case 'matutino': return 'Matutino (07:50-12:00)';
+            case 'vespertino': return 'Vespertino (15:50-18:00)';
+            case 'noturno': return 'Noturno (19:00-23:00)';
+            default: return turno;
+        }
+    }
+    
     return (
         <div className="register-container">
             <div className="register-card">
@@ -39,9 +107,14 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                         required
                     >
                         <option value="" disabled>Selecione o tipo da matrícula</option>
-                        <option value="EF1">Ensino Fundamental I - 1ª a 4ª etapa (15 anos completos)</option>
+                        {cursos.map((curso, index) => (
+                            <option key={curso.id} value={curso.id}>
+                                {curso.name}
+                            </option>
+                        ))}
+                        {/* <option value="EF1">Ensino Fundamental I - 1ª a 4ª etapa (15 anos completos)</option>
                         <option value="EF2">Ensino Fundamental II - 5ª a 8ª etapa (15 anos completos)</option>
-                        <option value="EM">Ensino Médio - 1º ao 3º ano (18 anos completos)</option>
+                        <option value="EM">Ensino Médio - 1º ao 3º ano (18 anos completos)</option> */}
                     </select>
                 </div>
                 <br></br>
@@ -55,9 +128,14 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                         required
                     >
                         <option value="" disabled>Selecione o turno</option>
-                        <option value="matutino">Matutino (07:50-12:00)</option>
+                        {/* <option value="matutino">Matutino (07:50-12:00)</option>
                         <option value="vespertino">Vespertino (15:50-18:00)</option>
-                        <option value="noturno">Noturno (19:00-23:00)</option>
+                        <option value="noturno">Noturno (19:00-23:00)</option> */}
+                        {availableShifts.map(shift => (
+                            <option key={shift} value={shift}>
+                                {formatTurno(shift)}
+                            </option>
+                        ))}
                     </select>
                 </div>
                 <br></br>
