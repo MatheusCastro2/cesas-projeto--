@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Escola CESAS",
   description: "Portal Online CESAS",
   icons: {
-    icon: "./favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
