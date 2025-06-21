@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StudentData } from './page';
 
 interface Props {
@@ -8,7 +8,54 @@ interface Props {
     prevPage: () => void;
 }
 
+const validateCPF = (cpf: string): boolean => {
+    const cleanedCPF = cpf.replace(/\D/g, '');
+
+    if(cleanedCPF.length !== 11){
+        return false;
+    }
+    const invalidCPFs = [
+        '00000000000', '11111111111', '22222222222', '33333333333', '44444444444',
+        '55555555555', '66666666666', '77777777777', '88888888888', '99999999999'
+    ];
+    if(invalidCPFs.includes(cleanedCPF)){
+        return false;
+    }
+
+    let sum=0
+    for(let i=0; i< 10; i++){
+        sum += parseInt(cleanedCPF.charAt(i)) * (11 - i);
+    }
+    let remainder = sum % 11;
+    let firstCheckDigit = remainder < 2 ? 0 : 11 - remainder;
+
+    sum = 0
+    for(let i=0; i<10; i++){
+        sum +=parseInt(cleanedCPF.charAt(i)) * (11-i);
+    }
+    remainder = sum % 11;
+    let secondCheckDigit = remainder < 2 ? 0 : 11 - remainder;
+
+    return cleanedCPF.charAt(9) === firstCheckDigit.toString() && cleanedCPF.charAt(10) === secondCheckDigit.toString();
+
+}
+
 export default function Step2({ studentData, handleInputChange,nextPage,prevPage }: Props) {
+
+    const [isInvalidCPF, setIsInvalidCPF] = useState(false);
+    
+        const handleCPFChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+            const { name, value } = e.target;
+            if (name === 'cpf') {
+                if (!validateCPF(value)) {
+                    setIsInvalidCPF(true);
+                } else {
+                    setIsInvalidCPF(false);
+                }
+            }
+            handleInputChange(e);  
+        };
+
     return (
         <div className="register-container">
             <div className="register-card">
@@ -35,9 +82,10 @@ export default function Step2({ studentData, handleInputChange,nextPage,prevPage
                         id="cpf"
                         name="cpf"
                         value={studentData.cpf}
-                        onChange={handleInputChange}
+                        onChange={handleCPFChange}
                         placeholder="Exemplo: 123.456.789-00"
                         required />
+                    {isInvalidCPF && <span style={{ color: 'red' }}>CPF inválido!</span>}
                 </div>
 
                 <br></br>
