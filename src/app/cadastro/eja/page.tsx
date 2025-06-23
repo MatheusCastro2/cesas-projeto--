@@ -103,11 +103,11 @@ export default function RegisterEJA(): ReactElement {
             case 6:
                 return <Step6 studentData={studentData} handleInputChange={handleInputChange} setStudentData={setStudentData} nextPage={nextPage} prevPage={prevPage} />;
             case 7:
-                return <Step7 handleInputChange={handleInputChange} prevPage={prevPage}/>;
+                return <Step7 handleInputChange={handleInputChange} prevPage={prevPage} />;
             case 8:
-                return <RegisterSucess/>;
+                return <RegisterSucess />;
             case 9:
-                return <RegisterFailed/>;
+                return <RegisterFailed />;
             default:
                 return null;
         }
@@ -153,10 +153,11 @@ export default function RegisterEJA(): ReactElement {
                 }
             }
 
-            const response = await fetch(`${API_HOST}/eja/students {
+            const response = await fetch(`${API_HOST}/eja/students`, {
                 method: 'POST',
                 body: formData,
-            }`);
+            });
+
 
             if (!response.ok) throw new Error('Erro ao enviar dados');
 
