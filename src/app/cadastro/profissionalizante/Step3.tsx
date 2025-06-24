@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StudentData } from './page';
 
 interface Props {
@@ -8,7 +8,33 @@ interface Props {
     prevPage: () => void;
 }
 
+const validatePhone = (tel: string): boolean => {
+    const cleanedTel = tel.replace(/\D/g, '');
+
+    if (cleanedTel.length !== 11){
+        return false;
+    }
+
+    if (!/^\d+$/.test(cleanedTel)) {
+        return false;
+    }
+    return true
+}
+
 export default function Step3({ studentData, handleInputChange, prevPage, nextPage }: Props) {
+    
+    const [isInvalidTel, setInvalidTel] = useState(false);
+
+    const handleTelChange = () =>{
+        const isTelValid = validatePhone(studentData.phone);
+
+        if (isTelValid){
+            setInvalidTel(false);
+            nextPage();
+        }else{
+            setInvalidTel(true);
+        }
+    };
     return (
         <div className="register-container">
             <div className="register-card">
@@ -39,9 +65,10 @@ export default function Step3({ studentData, handleInputChange, prevPage, nextPa
                         id="phone"
                         name='phone'
                         value={studentData.phone}
-                        onChange={handleInputChange}
+                        onChange={handleTelChange}
                         placeholder="Exemplo: (12) 34567-8901"
                         required />
+                    {isInvalidTel && <span style={{ color: 'red' }}>Celular inválido!</span>}
                     <br></br>
                 </div>
 
@@ -104,7 +131,7 @@ export default function Step3({ studentData, handleInputChange, prevPage, nextPa
 
                 <div className="button-container">
                     <button type='button' className="pagination-button" onClick={() => prevPage()}>Voltar</button>
-                    <button type='button' className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
+                    <button type='button' className="pagination-button" onClick={handleTelChange}>Prosseguir</button>
                 </div>
             </div>
         </div>
