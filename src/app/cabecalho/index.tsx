@@ -49,7 +49,8 @@ export default function Cabecalho() {
                                 <a className="nav-link" aria-current="page" href={`${API_HOST}/admin/login`}> Área Administrativa </a>
                             </li>
                             <li className="nav-item me-3">
-                                <a className="nav-link" href={studentAreaURL.URL}>Área do Aluno</a>
+                                <a className="nav-link" href={studentAreaURL?.URL || '#'}>Área do Aluno</a>
+
                             </li>
                             <li className="nav-item dropdown me-3">
                                 <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
