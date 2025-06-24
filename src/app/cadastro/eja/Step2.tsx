@@ -108,13 +108,10 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                     >
                         <option value="" disabled>Selecione o tipo da matrícula</option>
                         {cursos.map((curso, index) => (
-                            <option key={curso.id} value={curso.id}>
+                            <option key={curso.id} value={curso.name}>
                                 {curso.name}
                             </option>
                         ))}
-                        {/* <option value="EF1">Ensino Fundamental I - 1ª a 4ª etapa (15 anos completos)</option>
-                        <option value="EF2">Ensino Fundamental II - 5ª a 8ª etapa (15 anos completos)</option>
-                        <option value="EM">Ensino Médio - 1º ao 3º ano (18 anos completos)</option> */}
                     </select>
                 </div>
                 <br></br>

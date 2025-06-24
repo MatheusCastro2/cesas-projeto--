@@ -12,8 +12,6 @@ interface Curso {
     name: string;
     description: string;
     image: string;
-    start_date: string;
-    end_date: string;
 }
 
 export default function CursoEja() {

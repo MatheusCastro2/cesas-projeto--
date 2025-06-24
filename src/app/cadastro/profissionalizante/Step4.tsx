@@ -158,7 +158,7 @@ export default function Step4({ studentData, handleInputChange, prevPage, setStu
                     >
                         <option value="" disabled>Selecione o curso desejado</option>
                         {cursos.map((curso, index) => (
-                            <option key={curso.id} value={curso.id}>
+                            <option key={curso.id} value={curso.name}>
                                 {curso.name}
                             </option>
                         ))}

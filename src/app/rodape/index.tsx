@@ -16,7 +16,7 @@ export default function Rodape() {
     email: ''
   });
   useEffect(() => {
-    async function fetchFormTitle() {
+    async function fetchFooterData() {
       try {
         const response = await fetch(`${API_HOST}/getFooterData`);  // método GET
         const data = await response.json();
@@ -27,7 +27,7 @@ export default function Rodape() {
       }
     }
 
-    fetchFormTitle();
+    fetchFooterData();
   }, []);
 
   return (

@@ -17,23 +17,38 @@ interface Curso {
     end_date: string;
 }
 
+function formatarData(dataISO: string): string {
+    const data = new Date(dataISO);
+    const dia = String(data.getDate()).padStart(2, '0');
+    const mes = String(data.getMonth() + 1).padStart(2, '0'); // mês é 0-based
+    const ano = data.getFullYear();
+    return `${dia}/${mes}/${ano}`;
+}
+
 export default function CursoProfissionalizante() {
 
     const [cursos, setCursos] = useState<Curso[]>([]);
 
     useEffect(() => {
-        async function fetchCursos() {
-            try {
-                const response = await fetch(`${API_HOST}/getProfisCursos`); // rota certa aqui
-                const data = await response.json();
-                setCursos(data);
-            } catch (error) {
-                console.error("Erro ao buscar cursos:", error);
-            }
-        }
+    async function fetchCursos() {
+        try {
+            const response = await fetch(`${API_HOST}/getProfisCursos`);
+            const data = await response.json();
 
-        fetchCursos();
-    }, []);
+            const cursosFormatados = data.map((curso: Curso) => ({
+                ...curso,
+                start_date: formatarData(curso.start_date),
+                end_date: formatarData(curso.end_date),
+            }));
+
+            setCursos(cursosFormatados);
+        } catch (error) {
+            console.error("Erro ao buscar cursos:", error);
+        }
+    }
+
+    fetchCursos();
+}, []);
 
     // }
     // const [cursos] = useState([
