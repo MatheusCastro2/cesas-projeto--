@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StudentData } from './page';
 
 interface Props {
@@ -36,6 +36,7 @@ export default function Step6({ studentData, handleInputChange, setStudentData, 
                         value={studentData.responsibleId}
                         onChange={handleInputChange}
                         placeholder="Exemplo: 123.456.789-01" />
+                    
                     <br></br>
                 </div>
                 <br></br>

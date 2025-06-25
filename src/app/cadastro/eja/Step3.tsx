@@ -11,50 +11,66 @@ interface Props {
 const validateCPF = (cpf: string): boolean => {
     const cleanedCPF = cpf.replace(/\D/g, '');
 
-    if(cleanedCPF.length !== 11){
-        return false;
-    }
-    const invalidCPFs = [
-        '00000000000', '11111111111', '22222222222', '33333333333', '44444444444',
-        '55555555555', '66666666666', '77777777777', '88888888888', '99999999999'
-    ];
-    if(invalidCPFs.includes(cleanedCPF)){
+    if (cleanedCPF.length !== 11) {
         return false;
     }
 
-    let sum=0
-    for(let i=0; i< 10; i++){
-        sum += parseInt(cleanedCPF.charAt(i)) * (11 - i);
+    
+    if (/^(\d)\1+$/.test(cleanedCPF)) {
+        return false;
+    }
+
+   
+    let sum = 0;
+    for (let i = 0; i < 9; i++) {
+        
+        sum += parseInt(cleanedCPF.charAt(i)) * (10 - i);
     }
     let remainder = sum % 11;
     let firstCheckDigit = remainder < 2 ? 0 : 11 - remainder;
 
-    sum = 0
-    for(let i=0; i<10; i++){
-        sum +=parseInt(cleanedCPF.charAt(i)) * (11-i);
+    
+    if (parseInt(cleanedCPF.charAt(9)) !== firstCheckDigit) {
+        return false;
+    }
+
+    
+    sum = 0;
+    for (let i = 0; i < 10; i++) {
+        
+        sum += parseInt(cleanedCPF.charAt(i)) * (11 - i);
     }
     remainder = sum % 11;
     let secondCheckDigit = remainder < 2 ? 0 : 11 - remainder;
 
-    return cleanedCPF.charAt(9) === firstCheckDigit.toString() && cleanedCPF.charAt(10) === secondCheckDigit.toString();
-
+    
+    return parseInt(cleanedCPF.charAt(10)) === secondCheckDigit;
 }
 
 export default function Step3({ studentData, handleInputChange, nextPage, prevPage }: Props) {
 
     const [isInvalidCPF, setIsInvalidCPF] = useState(false);
 
-    const handleCPFChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        if (name === 'cpf') {
-            if (!validateCPF(value)) {
-                setIsInvalidCPF(true);
-            } else {
-                setIsInvalidCPF(false);
-            }
+    
+    const handleProceed = () => {
+        
+        const isCpfValid = validateCPF(studentData.cpf);
+
+        
+        if (isCpfValid) {
+            setIsInvalidCPF(false);
+            nextPage();
+        } else {
+            
+            setIsInvalidCPF(true);
         }
-        handleInputChange(e);  
     };
+
+    new Date().toISOString() 
+    .slice(0, 10) 
+    const today = new Date().toISOString().slice(0, 10);
+
+
 
     return (<div className="register-container">
         <div className="register-card">
@@ -113,6 +129,7 @@ export default function Step3({ studentData, handleInputChange, nextPage, prevPa
                     name="birthDate"
                     value={studentData.birthDate}
                     onChange={handleInputChange}
+                    max={today}
                     required />
             </div>
 
@@ -125,7 +142,7 @@ export default function Step3({ studentData, handleInputChange, nextPage, prevPa
                     id="cpf"
                     name="cpf"
                     value={studentData.cpf}
-                    onChange={handleCPFChange}
+                    onChange={handleInputChange}
                     placeholder="Exemplo: 123.456.789-00"
                     required />
                 {isInvalidCPF && <span style={{ color: 'red' }}>CPF inválido!</span>}
@@ -136,7 +153,7 @@ export default function Step3({ studentData, handleInputChange, nextPage, prevPa
 
             <div className="button-container">
                 <button type='button' className="pagination-button" onClick={() => prevPage()}>Voltar</button>
-                <button type='button' className="pagination-button" onClick={() => nextPage()}>Prosseguir</button>
+                <button type='button' className="pagination-button" onClick={handleProceed}>Prosseguir</button>
             </div>
         </div>
     </div>
