@@ -54,7 +54,7 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
         console.log("Cursos disponíveis:", cursos);
         if (!cursos.length || !studentData.applyType) return;
 
-        const selectedCurso = cursos.find(curso => curso.id === Number(studentData.applyType));
+        const selectedCurso = cursos.find(curso => String(curso.id) === studentData.applyType);
         console.log("Curso encontrado:", selectedCurso);
 
         if (selectedCurso) {
@@ -70,8 +70,10 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
     }, [studentData.applyType, cursos]);
 
     useEffect(() => {
+        console.log("Verificando curso para applyType:", studentData.applyType);
         const cursoSelecionado = cursos.find(c => String(c.id) === studentData.applyType);
         if (cursoSelecionado) {
+            console.log("Curso encontrado:", cursoSelecionado.name);
             setStudentData(prev => ({
                 ...prev,
                 applyTypeName: cursoSelecionado.name

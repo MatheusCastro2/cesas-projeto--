@@ -16,7 +16,6 @@ export default function Cabecalho() {
             try {
                 const response = await fetch(`${API_HOST}/getStudentAreaURL`);  // método GET
                 const data = await response.json();
-                // console.log(data);
                 setStudentAreaURL(data);
             } catch (error) {
                 console.error("Erro ao buscar título do formulário:", error);

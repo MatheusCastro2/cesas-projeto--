@@ -73,7 +73,7 @@ export default function RegisterEJA(): ReactElement {
         emergencyPhone: '',
         shift: '',
         applyType: '',
-        // applyTypeId: '',na v
+        // applyTypeId: '',
         applyTypeName: '',
         ethnicity: '',
         legacyStudent: false,
@@ -156,6 +156,8 @@ export default function RegisterEJA(): ReactElement {
                     formData.append(key, String(value));
                 }
             }
+
+            console.log('Dados enviados:', studentData);
 
             const response = await fetch(`${API_HOST}/eja/students`, {
                 method: 'POST',
