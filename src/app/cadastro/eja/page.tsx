@@ -35,6 +35,8 @@ export interface StudentData {
     emergencyPhone: string,
     shift: string,
     applyType: string,
+    // applyTypeId: string,
+    applyTypeName: string,
     ethnicity: string,
     legacyStudent: boolean
     disabledStudent: boolean,
@@ -71,6 +73,8 @@ export default function RegisterEJA(): ReactElement {
         emergencyPhone: '',
         shift: '',
         applyType: '',
+        // applyTypeId: '',na v
+        applyTypeName: '',
         ethnicity: '',
         legacyStudent: false,
         disabledStudent: false,

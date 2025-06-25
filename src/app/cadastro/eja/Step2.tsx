@@ -69,6 +69,16 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
         }
     }, [studentData.applyType, cursos]);
 
+    useEffect(() => {
+        const cursoSelecionado = cursos.find(c => String(c.id) === studentData.applyType);
+        if (cursoSelecionado) {
+            setStudentData(prev => ({
+                ...prev,
+                applyTypeName: cursoSelecionado.name
+            }));
+        }
+    }, [studentData.applyType, cursos]);
+
     function formatTurno(turno: string) {
         switch (turno) {
             case 'matutino': return 'Matutino (07:50-12:00)';
@@ -77,7 +87,7 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
             default: return turno;
         }
     }
-    
+
     return (
         <div className="register-container">
             <div className="register-card">
@@ -108,7 +118,7 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                     >
                         <option value="" disabled>Selecione o tipo da matrícula</option>
                         {cursos.map((curso, index) => (
-                            <option key={curso.id} value={curso.name}>
+                            <option key={curso.id} value={curso.id}>
                                 {curso.name}
                             </option>
                         ))}
