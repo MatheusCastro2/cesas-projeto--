@@ -40,7 +40,6 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
                     afternoonShift: Boolean(c.afternoonShiftAvailable),
                     nightShift: Boolean(c.nightShiftAvailable),
                 }));
-                console.log("Cursos normalizados:", normalized);
                 setCursos(normalized);
             } catch (error) {
                 console.error("Erro ao buscar cursos:", error);
@@ -50,19 +49,15 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
     }, []);
 
     useEffect(() => {
-        console.log("Curso selecionado:", studentData.applyType);
-        console.log("Cursos disponíveis:", cursos);
         if (!cursos.length || !studentData.applyType) return;
 
         const selectedCurso = cursos.find(curso => String(curso.id) === studentData.applyType);
-        console.log("Curso encontrado:", selectedCurso);
 
         if (selectedCurso) {
             const turnos: string[] = [];
             if (selectedCurso.morningShift) turnos.push('matutino');
             if (selectedCurso.afternoonShift) turnos.push('vespertino');
             if (selectedCurso.nightShift) turnos.push('noturno');
-            console.log("Turnos disponíveis:", turnos);
             setAvailableShifts(turnos);
         } else {
             setAvailableShifts([]);
@@ -70,10 +65,8 @@ export default function Step2({ studentData, handleInputChange, setStudentData, 
     }, [studentData.applyType, cursos]);
 
     useEffect(() => {
-        console.log("Verificando curso para applyType:", studentData.applyType);
         const cursoSelecionado = cursos.find(c => String(c.id) === studentData.applyType);
         if (cursoSelecionado) {
-            console.log("Curso encontrado:", cursoSelecionado.name);
             setStudentData(prev => ({
                 ...prev,
                 applyTypeName: cursoSelecionado.name

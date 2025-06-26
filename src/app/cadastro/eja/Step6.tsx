@@ -89,14 +89,12 @@ export default function Step6({ studentData, handleInputChange, setStudentData, 
 
                 <div className="button-container">
                     <button type='button' className="pagination-button" onClick={() => {
-                        console.log("cliquei no botão prosseguir");
                         prevPage()
                     }}>Voltar</button>
                     <button
                         type="button"
                         className='pagination-button'
                         onClick={() => {
-                            console.log("Clicou");
                             nextPage();
                         }}
                     >

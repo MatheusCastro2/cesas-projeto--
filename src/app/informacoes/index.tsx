@@ -36,7 +36,6 @@ export default function Informacoes() {
             try {
                 const response = await fetch(`${API_HOST}/getHomeData`); // rota certa aqui
                 const apiData = await response.json();
-                // console.log(data);
                 const transformedData: HomeData = {
                     mainContent: {
                         text: apiData.data[0]?.text || '',

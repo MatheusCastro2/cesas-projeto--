@@ -36,7 +36,6 @@ export default function Step4({ studentData, handleInputChange, prevPage, setStu
                     afternoonShift: Boolean(c.afternoonShiftAvailable),
                     nightShift: Boolean(c.nightShiftAvailable),
                 }));
-                console.log("Cursos normalizados:", normalized);
                 setCursos(normalized);
             } catch (error) {
                 console.error("Erro ao buscar cursos:", error);
@@ -46,27 +45,30 @@ export default function Step4({ studentData, handleInputChange, prevPage, setStu
     }, []);
 
     useEffect(() => {
-        console.log("Curso selecionado:", studentData.applyCourse);
-        console.log("Cursos disponíveis:", cursos);
         if (!cursos.length || !studentData.applyCourse) return;
 
         const selectedCurso = cursos.find(curso => curso.id === Number(studentData.applyCourse));
-        console.log("Curso encontrado:", selectedCurso);
 
         if (selectedCurso) {
             const turnos: string[] = [];
             if (selectedCurso.morningShift) turnos.push('matutino');
             if (selectedCurso.afternoonShift) turnos.push('vespertino');
             if (selectedCurso.nightShift) turnos.push('noturno');
-            console.log("Turnos disponíveis:", turnos);
             setAvailableShifts(turnos);
         } else {
             setAvailableShifts([]);
         }
     }, [studentData.applyCourse, cursos]);
 
-
-
+    useEffect(() => {
+        const cursoSelecionado = cursos.find(c => String(c.id) === studentData.applyCourse);
+        if (cursoSelecionado) {
+            setStudentData(prev => ({
+                ...prev,
+                applyCourseName: cursoSelecionado.name
+            }));
+        }
+    }, [studentData.applyCourse, cursos]);
 
     function formatTurno(turno: string) {
         switch (turno) {
@@ -142,11 +144,6 @@ export default function Step4({ studentData, handleInputChange, prevPage, setStu
                     />
                     <br></br>
                 </div>
-                <div className='form-group image'>
-                    <label htmlFor='image'>Anexe seu Laudo Médico (Para Estudante com Deficiência)</label>
-                    <input type="file" name='studentMedicalReport' accept="image/*" onChange={handleInputChange} />
-                </div>
-                <br></br>
                 <div className='form-group dropdown'>
                     <label htmlFor='applyCourse'>Curso desejado: </label>
                     <select
@@ -158,7 +155,7 @@ export default function Step4({ studentData, handleInputChange, prevPage, setStu
                     >
                         <option value="" disabled>Selecione o curso desejado</option>
                         {cursos.map((curso, index) => (
-                            <option key={curso.id} value={curso.name}>
+                            <option key={curso.id} value={curso.id}>
                                 {curso.name}
                             </option>
                         ))}

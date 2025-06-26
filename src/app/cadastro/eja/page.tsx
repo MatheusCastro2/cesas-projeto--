@@ -145,7 +145,6 @@ export default function RegisterEJA(): ReactElement {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('Dados do cadastro:', studentData);
         try {
             const formData = new FormData();
 
@@ -157,7 +156,6 @@ export default function RegisterEJA(): ReactElement {
                 }
             }
 
-            console.log('Dados enviados:', studentData);
 
             const response = await fetch(`${API_HOST}/eja/students`, {
                 method: 'POST',

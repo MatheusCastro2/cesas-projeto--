@@ -63,9 +63,9 @@ export default function Step3({ studentData, handleInputChange, prevPage, nextPa
                     <input
                         type="text"
                         id="phone"
-                        name='phone'
+                        name="phone"
                         value={studentData.phone}
-                        onChange={handleTelChange}
+                        onChange={handleInputChange}
                         placeholder="Exemplo: (12) 34567-8901"
                         required />
                     {isInvalidTel && <span style={{ color: 'red' }}>Celular inválido!</span>}

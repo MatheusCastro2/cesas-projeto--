@@ -25,7 +25,6 @@ export default function Cabecalho() {
         fetchStudentAreaURL();
     }, []);
 
-    console.log(studentAreaURL);
 
     return (
         <>
