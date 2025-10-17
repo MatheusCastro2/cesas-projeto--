@@ -1,7 +1,6 @@
 # Projeto CESAS - Plataforma Educacional Moderna
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x200.png?text=Plataforma+Educacional+CESAS" alt="Banner do Projeto CESAS">
 </p>
 
 <p align="center">
@@ -25,6 +24,11 @@ Acesse a versão de produção do site e navegue pela aplicação:
   <a href="https://www.youtube.com/watch?v=ff5bEoexFOQ">
     <img src="https://via.placeholder.com/400x250.png?text=Clique+para+ver+o+Painel+Admin" alt="Demonstração do Painel Admin">
   </a>
+    <strong>🎥 Vídeo de Demonstração do Painel da Area de Estudante 🎥</strong><br>
+  <a href="https://youtu.be/Arw0s9s3fWk">
+    <img src="https://via.placeholder.com/400x250.png?text=Clique+para+ver+o+Painel+Admin" alt="Demonstração do Painel Admin">
+  </a>
+  
 </p>
 
 ## 📍 Propósito do Projeto
@@ -32,6 +36,7 @@ Acesse a versão de produção do site e navegue pela aplicação:
 O objetivo central foi desenvolver um portal institucional moderno e funcional para o **CESAS**, uma instituição pública de Educação de Jovens e Adultos (EJA) no Distrito Federal.
 
 A plataforma foi criada para resolver desafios de comunicação e acesso à informação, servindo como uma ponte digital entre a escola e a comunidade. O foco principal foi a **intuitividade**, garantindo que estudantes de todos os níveis de habilidade digital pudessem navegar pelo site, encontrar informações sobre cursos e realizar suas matrículas de forma simples e direta.
+Também desenvolvemos uma área administrativa para que os coordenadores da escola tivessem controle sobre as informações dos alunos, a grade horária e pudessem gerar relatórios em .pdf e .csv.
 
 ---
 
